@@ -23,7 +23,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-m">Naam</span>
                 </div>
-                <input type="text" name="favName" ng-model="favName" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input type="text" name="favName" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
             </div>
             <div class="btn-group mt-0 mb-4 d-flex justify-content-right">
                 <a href="#" class="btn btn-primary">zoek</a>
@@ -34,7 +34,7 @@
                 <p>Gebruik huidige locatie: </p>
 
                 <div class="ml-3 mb-3">
-                    <select class="form-select" name="favDist" ng-model="favDist" aria-label="Default select example">
+                    <select class="form-select" name="favDist" aria-label="Default select example">
                         <option selected>Afstand van huidige locatie tot</option>
                         <option value="1">straal van 5km</option>
                         <option value="2">straal van 10km</option>
@@ -80,78 +80,78 @@
 
                 <p class="mr-5 mb-3">Filteren: </p>
                 <!--age 0 - 3-->
-                <input type="checkbox" class="radio_age" value="" name="favBaby" ng-model="favBaby" id="age1">
+                <input type="checkbox" class="radio_age" value="" name="favBaby" id="age1">
                 <label class="label_age" for="age1"> <img src="assets/img/age03.png" class="radioimg"> </label>
 
                 <!--age 3 - 6-->
-                <input type="checkbox" class="radio_age" value="" name="favTodler" ng-model="favTodler" id="age2">
+                <input type="checkbox" class="radio_age" value="" name="favTodler" id="age2">
                 <label class="label_age" for="age2"> <img src="assets/img/age36.png" class="radioimg"> </label>
 
                 <!--age 6 - 9-->
-                <input type="checkbox" class="radio_age" value="" name="favChild" ng-model="favChild" id="age3">
+                <input type="checkbox" class="radio_age" value="" name="favChild" id="age3">
                 <label class="label_age" for="age3"> <img src="assets/img/age69.png" class="radioimg"> </label>
 
                 <!--age 9 - 12-->
-                <input type="checkbox" class="radio_age" value="" name="favTeen" ng-model="favTeen" id="age4">
+                <input type="checkbox" class="radio_age" value="" name="favTeen" id="age4">
                 <label class="label_age" for="age4"> <img src="assets/img/age912.png" class="radioimg"> </label>
 
                 <!--small-->
-                <input type="checkbox" class="radio_item" value="" name="favSmall" ng-model="favSmall" id="radio1">
+                <input type="checkbox" class="radio_item" value="" name="favSmall" id="radio1">
                 <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg"> </label>
 
                 <!--medium-->
-                <input type="checkbox" class="radio_item" value="" name="favMedium" ng-model="favMedium" id="radio2">
+                <input type="checkbox" class="radio_item" value="" name="favMedium" id="radio2">
                 <label class="label_item" for="radio2"> <img src="assets/img/sizeM.png" class="radioimg"> </label>
 
                 <!--large-->
-                <input type="checkbox" class="radio_item" value="" name="favLarge" ng-model="favLarge" id="radio3">
+                <input type="checkbox" class="radio_item" value="" name="favLarge" id="radio3">
                 <label class="label_item" for="radio3"> <img src="assets/img/sizeL.png" class="radioimg"> </label>
 
                 <!--extra large-->
-                <input type="checkbox" class="radio_item" value="" name="favXl" ng-model="favXl" id="radio4">
+                <input type="checkbox" class="radio_item" value="" name="favXl" id="radio4">
                 <label class="label_item" for="radio4"> <img src="assets/img/sizeXl.png" class="radioimg"> </label>
 
                 <!--Free-->
-                <input type="checkbox" class="radio_price" value="" name="favFree" ng-model="favFree" id="price1">
+                <input type="checkbox" class="radio_price" value="" name="favFree" id="price1">
                 <label class="label_price" for="price1"> <img src="assets/img/free.png" class="radioimg"> </label>
 
                 <!--cheap-->
-                <input type="checkbox" class="radio_price" value="" name="favCheap" ng-model="favCheap" id="price2">
+                <input type="checkbox" class="radio_price" value="" name="favCheap"  id="price2">
                 <label class="label_price" for="price2"> <img src="assets/img/priceCheap.png" class="radioimg"> </label>
 
                 <!--normal-->
-                <input type="checkbox" class="radio_price" value="" name="favNormal" ng-model="favNormal" id="price3">
+                <input type="checkbox" class="radio_price" value="" name="favNormal" id="price3">
                 <label class="label_price" for="price3"> <img src="assets/img/priceNormal.png" class="radioimg">
                 </label>
 
                 <!--expensive-->
-                <input type="checkbox" class="radio_price" value="" name="favExpensive" ng-model="favExpensive" id="price4">
+                <input type="checkbox" class="radio_price" value="" name="favExpensive" id="price4">
                 <label class="label_price" for="price4"> <img src="assets/img/priceExpensive.png" class="radioimg">
                 </label>
 
                 <!--Adults have to pay-->
-                <input type="checkbox" class="radio_price" value="" name="favFree" ng-model="favFree" id="price5">
+                <input type="checkbox" class="radio_price" value="" name="favFree" id="price5">
                 <label class="label_price" for="price5"> <img src="assets/img/priceAdult.png" class="radioimg"> </label>
 
                 <!-- Food and beverage -->
-                <input type="checkbox" class="radio_price" value="" name="favFnb" ng-model="favFnb" id="fnb">
+                <input type="checkbox" class="radio_price" value="" name="favFnb"  id="fnb">
                 <label class="label_price" for="fnb"> <img src="assets/img/fnb.png" class="radioimg"> </label>
 
                 <!-- Food and beverage near -->
-                <input type="checkbox" class="radio_price" value="" name="favFnbNear" ng-model="favFnbNear" id="fnbNear">
+                <input type="checkbox" class="radio_price" value="" name="favFnbNear" id="fnbNear">
                 <label class="label_price" for="fnbNear"> <img src="assets/img/fnbNear.png" class="radioimg"> </label>
 
                 <!-- Picknick allowed-->
-                <input type="checkbox" class="radio_price" value="" name="favPickNick" ng-model="favPickNick" id="pickNick">
+                <input type="checkbox" class="radio_price" value="" name="favPickNick" id="pickNick">
                 <label class="label_price" for="pickNick"> <img src="assets/img/fnbPickNick.png" class="radioimg">
                 </label>
 
                 <!-- Toilet present -->
-                <input type="checkbox" class="radio_price" value="" name="favWc" ng-model="favWc" id="wc">
+                <input type="checkbox" class="radio_price" value="" name="favWc" id="wc">
                 <label class="label_price" for="wc"> <img src="assets/img/wc.png" class="radioimg"></label>
 
                 <!-- Verified -->
-                <input type="checkbox" class="radio_price" value="" name="favVerf" ng-model="favVerf" id="verf">
+                <input type="checkbox" class="radio_price" value="" name="favVerf" id="verf">
                 <label class="label_price" for="verf"> <img src="assets/img/verf.png" class="radioimg"></label>
 
                 <br>

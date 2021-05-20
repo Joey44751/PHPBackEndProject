@@ -29,7 +29,7 @@
         <div class="container mt-3" *ngFor="let playground of playgrounds$ | async">
             <div class="row pt-2">
                 <div class="col-md-2 "></div>
-                <div class="col-md-4"><h2>playground.name</h2></div>
+                <div class="col-md-4"><h2>playground name</h2></div>
                 <div class="col-md-2 cnt">
                     <img src="assets/img/rate.png" class="icon" title="rating">
                     <img src="assets/img/rate.png" class="icon" title="rating">
@@ -141,7 +141,7 @@
                 <div class="panel">
                     <!-- write review -->
                         <div class="panel-body">
-                            <textarea class="form-control" name="PgReview" ng-model="PgReview" rows="2" placeholder="schrijf hier uw review"></textarea>
+                            <textarea class="form-control" name="PgReview" rows="2" placeholder="schrijf hier uw review"></textarea>
                             <div class="mar-top clearfix">
                         <!-- Submit button -->
                             <button class="btn" type="submit"><i></i> Submit</button>
@@ -176,7 +176,7 @@
                 <div class="card border-left-primary" *ngFor="let playground of playgrounds$ | async">
                     <div class="card-body">
                             <div>
-                                <h3>playground.name</h3>
+                                <h3>playground name</h3>
                                 <img src="assets/img/rate.png" class="icon iconsm float-left" title="rating">
                                 <img src="assets/img/rate.png" class="icon iconsm float-left" title="rating">
                                 <img src="assets/img/rateHalf.png" class="icon iconsm float-left" title="rating">

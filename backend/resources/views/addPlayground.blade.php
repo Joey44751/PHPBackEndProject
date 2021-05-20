@@ -24,7 +24,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"  id="inputGroup-sizing-m">Naam speeltuin</span>
                         </div>
-                        <input type="text" class="form-control" #name ng-model="namePlayground" name="namePlayground" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <input type="text" class="form-control" name="namePlayground" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                     </div>
                 </div>
                 </div>
@@ -39,7 +39,7 @@
 
                             <!-- use current location -->
                             <div class="form-check">
-                                <input type="checkbox" name="currentLocation" ng-model="currentLocation" class="form-check-input" id="exampleCheck1">
+                                <input type="checkbox" name="currentLocation" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label"  for="exampleCheck1"><h4>Gebruik huidige locatie</h4></label>
                               </div>
                               <br>
@@ -49,7 +49,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"  id="inputGroup-sizing-sm">Straat</span>
                                 </div>
-                                <input type="text" ng-model="street" #street class="form-control" name="street" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" class="form-control" name="street" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -57,7 +57,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Nummer</span>
                                 </div>
-                                <input type="number" ng-model="homeNumber" #number name="homeNumber" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="number" #number name="homeNumber" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
                             
                             <div class="input-group input-group-sm mb-3">
@@ -65,7 +65,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Stad</span>
                                 </div>
-                                <input type="text" ng-model="city" name="city" #city class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" name="city" #city class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
@@ -73,7 +73,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Postcode</span>
                                 </div>
-                                <input type="text" ng-model="postal" name="postal" #zip_code class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                <input type="text" name="postal" #zip_code class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                         </div>
@@ -104,7 +104,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">Korte omschrijving</span>
                                 </div>
-                                <textarea class="form-control" #extra ng-model="descr" name="descr" aria-label="With textarea"></textarea>
+                                <textarea class="form-control" #extra name="descr" aria-label="With textarea"></textarea>
                               </div>
                         </div>
                     </div>
@@ -116,19 +116,19 @@
                             <h4>Grote van de speeltuin</h4>
                           
                             <!--small-->
-                            <input type="radio" class="radio_item" value="small" ng-model="item" name="item" id="radio1">
+                            <input type="radio" class="radio_item" value="small" name="item" id="radio1">
                             <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg" > </label>
 
                             <!--medium-->
-                            <input type="radio" class="radio_item" value="medium" ng-model="item" name="item" id="radio2">
+                            <input type="radio" class="radio_item" value="medium" name="item" id="radio2">
                             <label class="label_item" for="radio2"> <img src="assets/img/sizeM.png" class="radioimg" > </label>
 
                              <!--large-->
-                             <input type="radio" class="radio_item" value="large" ng-model="item" name="item" id="radio3">
+                             <input type="radio" class="radio_item" value="large" name="item" id="radio3">
                              <label class="label_item" for="radio3"> <img src="assets/img/sizeL.png" class="radioimg" > </label>
  
                              <!--extra large-->
-                             <input type="radio" class="radio_item" value="xl" ng-model="item" name="item" id="radio4">
+                             <input type="radio" class="radio_item" value="xl" name="item" id="radio4">
                              <label class="label_item" for="radio4"> <img src="assets/img/sizeXl.png" class="radioimg" > </label>
 
                             <br>
@@ -145,19 +145,19 @@
                             <h4>Voor leeftijd</h4>
                           
                             <!--age 0 - 3-->
-                            <input type="checkbox" class="radio_age" value="" ng-model="baby" name="baby" id="age1">
+                            <input type="checkbox" class="radio_age" value="" name="baby" id="age1">
                             <label class="label_age" for="age1"> <img src="assets/img/age03.png" class="radioimg" > </label>
 
                             <!--age 3 - 6-->
-                            <input type="checkbox" class="radio_age" value="" ng-model="todler" name="todler" id="age2">
+                            <input type="checkbox" class="radio_age" value="" name="todler" id="age2">
                             <label class="label_age" for="age2"> <img src="assets/img/age36.png" class="radioimg" > </label>
 
                              <!--age 6 - 9-->
-                             <input type="checkbox" class="radio_age" value="" ng-model="child" name="child" id="age3">
+                             <input type="checkbox" class="radio_age" value="" name="child" id="age3">
                              <label class="label_age" for="age3"> <img src="assets/img/age69.png" class="radioimg" > </label>
  
                              <!--age 9 - 12-->
-                             <input type="checkbox" class="radio_age" value="" ng-model="teen" name="teen" id="age4">
+                             <input type="checkbox" class="radio_age" value="" name="teen" id="age4">
                              <label class="label_age" for="age4"> <img src="assets/img/age912.png" class="radioimg" > </label>
 
                             <br>
@@ -174,23 +174,23 @@
                             <h4>Entreegeld</h4>
                           
                             <!--Free-->
-                            <input type="radio" class="radio_price" value="free" ng-model="price" name="price" id="price1">
+                            <input type="radio" class="radio_price" value="free" name="price" id="price1">
                             <label class="label_price" for="price1"> <img src="assets/img/free.png" class="radioimg" > </label>
 
                             <!--cheap-->
-                            <input type="radio" class="radio_price" value="cheap" ng-model="price" name="price" id="price2">
+                            <input type="radio" class="radio_price" value="cheap" name="price" id="price2">
                             <label class="label_price" for="price2"> <img src="assets/img/priceCheap.png" class="radioimg" > </label>
 
                              <!--normal-->
-                             <input type="radio" class="radio_price" value="normal" ng-model="price" name="price" id="price3">
+                             <input type="radio" class="radio_price" value="normal" name="price" id="price3">
                              <label class="label_price" for="price3"> <img src="assets/img/priceNormal.png" class="radioimg" > </label>
  
                              <!--expensive-->
-                             <input type="radio" class="radio_price" value="expensive" ng-model="price" name="price" id="price4">
+                             <input type="radio" class="radio_price" value="expensive" name="price" id="price4">
                              <label class="label_price" for="price4"> <img src="assets/img/priceExpensive.png" class="radioimg" > </label>
 
                             <!--Adults have to pay-->
-                            <input type="checkbox" class="radio_price" value="adultEntry" ng-model="price" name="price" id="price5">
+                            <input type="checkbox" class="radio_price" value="adultEntry" name="price" id="price5">
                             <label class="label_price" for="price5"> <img src="assets/img/priceAdult.png" class="radioimg" > </label>
 
                             <br>
@@ -210,31 +210,31 @@
                             <h4>Algemene informatie</h4>
 
                             <!-- Food and beverage -->
-                            <input type="checkbox" class="radio_price" value="" ng-model="fnb" name="fnb" id="fnb">
+                            <input type="checkbox" class="radio_price" value="" name="fnb" id="fnb">
                             <label class="label_price" for="fnb"> <img src="assets/img/fnb.png" class="radioimg" > </label>
 
                             <!-- Food and beverage near -->
-                            <input type="checkbox" class="radio_price" value="" ng-model="fnbNear" name="fnbNear" id="fnbNear">
+                            <input type="checkbox" class="radio_price" value="" name="fnbNear" id="fnbNear">
                             <label class="label_price" for="fnbNear"> <img src="assets/img/fnbNear.png" class="radioimg" > </label>
 
                             <!-- Picknick allowed-->
-                            <input type="checkbox" class="radio_price" value="" ng-model="pickNick" name="pickNick" id="pickNick">
+                            <input type="checkbox" class="radio_price" value="" name="pickNick" id="pickNick">
                             <label class="label_price" for="pickNick"> <img src="assets/img/fnbPickNick.png" class="radioimg" > </label>
 
                             <!-- Toilet present -->
-                            <input type="checkbox" class="radio_price" value="" ng-model="wc" name="wc" id="wc">
+                            <input type="checkbox" class="radio_price" value="" name="wc" id="wc">
                             <label class="label_price" for="wc"> <img src="assets/img/wc.png" class="radioimg" > </label>
 
                             <!-- City enviroment -->
-                            <input type="checkbox" class="radio_price" value="" ng-model="cityLs" name="cityLs" id="city">
+                            <input type="checkbox" class="radio_price" value="" name="cityLs" id="city">
                             <label class="label_price" for="city"> <img src="assets/img/lsCity.png" class="radioimg" > </label>
 
                              <!-- Field enviroment -->
-                             <input type="checkbox" class="radio_price" value="" ng-model="fieldLs" name="fieldLs" id="field">
+                             <input type="checkbox" class="radio_price" value="" name="fieldLs" id="field">
                              <label class="label_price" for="field"> <img src="assets/img/lsField.png" class="radioimg" > </label>
 
                               <!-- Forest enviroment -->
-                            <input type="checkbox" class="radio_price" value="" ng-model="forestLs" name="forestLs" id="forest">
+                            <input type="checkbox" class="radio_price" value="" name="forestLs" id="forest">
                             <label class="label_price" for="forest"> <img src="assets/img/lsForest.png" class="radioimg" > </label>
 
                             <br>

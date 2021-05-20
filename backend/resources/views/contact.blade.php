@@ -21,7 +21,7 @@
                     <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
                     </div>
-                    <input type="email" #email ng-model="ctcEmail" style="min-height:50px" class="form-control" name="ctcEmail" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    <input type="email" #email style="min-height:50px" class="form-control" name="ctcEmail" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
             </div>
 
             <!-- short description -->
@@ -29,7 +29,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text">Bericht</span>
                 </div>
-                <textarea class="form-control" #bericht style="min-height:250px"    ng-model="ctcDescr" name="ctcDescr" aria-label="With textarea"></textarea>
+                <textarea class="form-control" #bericht style="min-height:250px" name="ctcDescr" aria-label="With textarea"></textarea>
             </div>
 
             <!-- send button -->

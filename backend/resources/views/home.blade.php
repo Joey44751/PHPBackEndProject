@@ -11,7 +11,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroup-sizing-m">Gemeente</span>
                 </div>
-                <input type="text" class="form-control" name="hmCity" ng-model="hmCity" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input type="text" class="form-control" name="hmCity" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
             </div>
             <div class="btn-group mt-0 mb-4">
                 <a href="#" class="btn btn-primary active" aria-current="page">toevoegen</a>
@@ -23,7 +23,7 @@
                 <p>Gebruik huidige locatie: </p>
 
                 <div class="ml-3 mb-3">
-                    <select class="form-select" name="hmDist" ng-model="hmDist" aria-label="Default select example">
+                    <select class="form-select" name="hmDist" aria-label="Default select example">
                         <option selected>Afstand van huidige locatie tot</option>
                         <option value="1">straal van 5km</option>
                         <option value="2">straal van 10km</option>
@@ -74,95 +74,95 @@
 
                 <p class="mr-5 mb-3">Filteren: </p>
                 <!--age 0 - 3-->
-                <input type="checkbox" class="radio_age" value="" name="hmbaby" ng-model="hmbaby" id="age1">
+                <input type="checkbox" class="radio_age" value="" name="hmbaby" id="age1">
                 <label class="label_age" for="age1"> <img src="assets/img/age03.png" class="radioimg"> </label>
 
                 <!--age 3 - 6-->
-                <input type="checkbox" class="radio_age" value="" name="hmTodler" ng-model="hmTodler" id="age2">
+                <input type="checkbox" class="radio_age" value="" name="hmTodler" id="age2">
                 <label class="label_age" for="age2"> <img src="assets/img/age36.png" class="radioimg"> </label>
 
                 <!--age 6 - 9-->
-                <input type="checkbox" class="radio_age" value="" name="hmChild" ng-model="hmChild" id="age3">
+                <input type="checkbox" class="radio_age" value="" name="hmChild" id="age3">
                 <label class="label_age" for="age3"> <img src="assets/img/age69.png" class="radioimg"> </label>
 
                 <!--age 9 - 12-->
-                <input type="checkbox" class="radio_age" value="" name="hmTeen" ng-model="hmTeen" id="age4">
+                <input type="checkbox" class="radio_age" value="" name="hmTeen" id="age4">
                 <label class="label_age" for="age4"> <img src="assets/img/age912.png" class="radioimg"> </label>
 
                 <!--small-->
-                <input type="checkbox" class="radio_item" value="" name="hmSmall" ng-model="hmSmall" id="radio1">
+                <input type="checkbox" class="radio_item" value="" name="hmSmall" id="radio1">
                 <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg"> </label>
 
                 <!--medium-->
-                <input type="checkbox" class="radio_item" value="" name="hmMedium" ng-model="hmMedium" id="radio2">
+                <input type="checkbox" class="radio_item" value="" name="hmMedium" id="radio2">
                 <label class="label_item" for="radio2"> <img src="assets/img/sizeM.png" class="radioimg"> </label>
 
                 <!--large-->
-                <input type="checkbox" class="radio_item" value="" name="hmLarge" ng-model="hmLarge" id="radio3">
+                <input type="checkbox" class="radio_item" value="" name="hmLarge" id="radio3">
                 <label class="label_item" for="radio3"> <img src="assets/img/sizeL.png" class="radioimg"> </label>
 
                 <!--extra large-->
-                <input type="checkbox" class="radio_item" value="" name="hmXl" ng-model="hmXl" id="radio4">
+                <input type="checkbox" class="radio_item" value="" name="hmXl"id="radio4">
                 <label class="label_item" for="radio4"> <img src="assets/img/sizeXl.png" class="radioimg"> </label>
 
                 <!--Free-->
-                <input type="checkbox" class="radio_price" value="" name="hmFree" ng-model="hmFree" id="price1">
+                <input type="checkbox" class="radio_price" value="" name="hmFree" id="price1">
                 <label class="label_price" for="price1"> <img src="assets/img/free.png" class="radioimg"> </label>
 
                 <!--cheap-->
-                <input type="checkbox" class="radio_price" value="" name="hmCheap" ng-model="hmCheap" id="price2">
+                <input type="checkbox" class="radio_price" value="" name="hmCheap" id="price2">
                 <label class="label_price" for="price2"> <img src="assets/img/priceCheap.png" class="radioimg"> </label>
 
                 <!--normal-->
-                <input type="checkbox" class="radio_price" value="" name="hmNormal" ng-model="hmNormal" id="price3">
+                <input type="checkbox" class="radio_price" value="" name="hmNormal" id="price3">
                 <label class="label_price" for="price3"> <img src="assets/img/priceNormal.png" class="radioimg">
                 </label>
 
                 <!--expensive-->
-                <input type="checkbox" class="radio_price" value="" name="hmExpensive" ng-model="hmExpensive" id="price4">
+                <input type="checkbox" class="radio_price" value="" name="hmExpensive" id="price4">
                 <label class="label_price" for="price4"> <img src="assets/img/priceExpensive.png" class="radioimg">
                 </label>
 
                 <!--Adults have to pay-->
-                <input type="checkbox" class="radio_price" value="" name="hmAdultEntry" ng-model="hmAdultEntry" id="price5">
+                <input type="checkbox" class="radio_price" value="" name="hmAdultEntry" id="price5">
                 <label class="label_price" for="price5"> <img src="assets/img/priceAdult.png" class="radioimg"> </label>
 
                 <!-- Food and beverage -->
-                <input type="checkbox" class="radio_price" value="" name="hmFnb" ng-model="hmFnb" id="fnb">
+                <input type="checkbox" class="radio_price" value="" name="hmFnb" id="fnb">
                 <label class="label_price" for="fnb"> <img src="assets/img/fnb.png" class="radioimg"> </label>
 
                 <!-- Food and beverage near -->
-                <input type="checkbox" class="radio_price" value="" name="hmFnbNear" ng-model="hmFnbNear" id="fnbNear">
+                <input type="checkbox" class="radio_price" value="" name="hmFnbNear" id="fnbNear">
                 <label class="label_price" for="fnbNear"> <img src="assets/img/fnbNear.png" class="radioimg"> </label>
 
                 <!-- Picknick allowed-->
-                <input type="checkbox" class="radio_price" value="" name="hmPickNick" ng-model="hmPickNick" id="pickNick">
+                <input type="checkbox" class="radio_price" value="" name="hmPickNick" id="pickNick">
                 <label class="label_price" for="pickNick"> <img src="assets/img/fnbPickNick.png" class="radioimg">
                 </label>
 
                 <!-- Toilet present -->
-                <input type="checkbox" class="radio_price" value="" name="hmWc" ng-model="hmWc" id="wc">
+                <input type="checkbox" class="radio_price" value="" name="hmWc" id="wc">
                 <label class="label_price" for="wc"> <img src="assets/img/wc.png" class="radioimg"></label>
 
                 <!-- Verified -->
-                <input type="checkbox" class="radio_price" value="" name="hmVerf" ng-model="hmVerf" id="verf">
+                <input type="checkbox" class="radio_price" value="" name="hmVerf" id="verf">
                 <label class="label_price" for="verf"> <img src="assets/img/verf.png" class="radioimg"></label>
 
                 <p>Rating</p>
                <!--rating-->
-               <input type="checkbox" class="radio_age hmRateOne" value="" name="hmRate" ng-model="hmRate" id="hmRate">
+               <input type="checkbox" class="radio_age hmRateOne" value="" name="hmRate" id="hmRate">
                <label class="label_age" for="hmRate"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
                 <!-- second star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateTwo" ng-model="hmRateTwo" id="hmRateTwo">
+               <input type="checkbox" class="radio_age" value="" name="hmRateTwo" id="hmRateTwo">
                <label class="label_age" for="hmRateTwo"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
                 <!-- third star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateThree" ng-model="hmRateThree" id="hmRateThree">
+               <input type="checkbox" class="radio_age" value="" name="hmRateThree" id="hmRateThree">
                <label class="label_age" for="hmRateThree"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
                 <!-- fourth star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateFour" ng-model="hmRateFour" id="hmRateFour">
+               <input type="checkbox" class="radio_age" value="" name="hmRateFour" id="hmRateFour">
                <label class="label_age" for="hmRateFour"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
                 <!-- fifth star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateFive" ng-model="hmRateFive" id="hmRateFive">
+               <input type="checkbox" class="radio_age" value="" name="hmRateFive" id="hmRateFive">
                <label class="label_age" for="hmRateFive"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
 
                 <br>
