@@ -28,3 +28,11 @@ Route::get('/home', function () {
 Route::get('/addplayground', function () {
     return view('addplayground');
 });
+
+Route::get('/favorites', function () {
+    return view('favorites');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
