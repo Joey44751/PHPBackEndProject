@@ -25,3 +25,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/addplayground', function () {
+    return view('addplayground');
+});

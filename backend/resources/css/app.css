@@ -218,3 +218,7 @@ label.star:before {
     font-size: 35px !important;
     rotate: left !important;
 }
+.active{
+    font-weight: bold;
+    color: white !important;
+}

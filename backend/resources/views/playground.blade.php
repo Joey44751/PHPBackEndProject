@@ -1,4 +1,5 @@
 @extends('layout.theme')
+<link rel="stylesheet" href="assets/css/playground.css">
 @section('content')
     <!-- header photo carrousel -->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
