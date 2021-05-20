@@ -1,51 +1,16 @@
-@extends('layout.layout')
+@extends('layout.theme')
 @section('content')
-<div id=htmlData>
-    <!-- pink section, navigation bar -->
-    <nav class="navbar navbar-expand-md navbar-dark balk">
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/playground">Speeltuin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/addplayground">Speeltuin toevoegen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/favorites">Favorieten</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Gebruikers info" routerLink="/userpage"><i class="bi bi-person-circle"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Logout"(click)="authService.SignOut()"><i class="bi bi-box-arrow-right"></i></a>
-                </li>
-            </ul>
-        </div>
-        <div class="mx-auto order-0">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
-
     <!-- header photo carrousel -->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="" class="d-block w-100" alt="cover">
+            <img src="assets/img/top.jpg" class="d-block w-100" alt="cover">
           </div>
           <div class="carousel-item">
-            <img src="" class="d-block w-100" alt="...">
+            <img src="assets/img/vb2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="" class="d-block w-100" alt="...">
+            <img src="assets/img/vb.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <!-- carrousel buttons -->
@@ -63,16 +28,16 @@
         <div class="container mt-3" *ngFor="let playground of playgrounds$ | async">
             <div class="row pt-2">
                 <div class="col-md-2 "></div>
-                <div class="col-md-4"><h2></h2></div>
+                <div class="col-md-4"><h2>playground.name</h2></div>
                 <div class="col-md-2 cnt">
-                    <p>rating</p>
-                    <img src="" class="icon" title="rating">
-                    <img src="" class="icon" title="rating">
+                    <img src="assets/img/rate.png" class="icon" title="rating">
+                    <img src="assets/img/rate.png" class="icon" title="rating">
+                    <img src="assets/img/rateHalf.png" class="icon" title="rating">
                 </div>
                 <!-- title block icons -->
                 <div class="col-md-2 cnt">
-                    <img src="" class="icon" title="toegevoegd door">
-                    <img src="" class="icon" title="geverifieerd">
+                    <img src="assets/img/addByUser.png" class="icon" title="toegevoegd door">
+                    <img src="assets/img/verf.png" class="icon" title="geverifieerd">
                 </div>
                 <div class="col-md-2 mb-2"></div>
             </div>
@@ -88,13 +53,13 @@
                                 <h3>Info</h3>
                                 <hr>
                                 <!-- info icons -->
-                                <div class="float-left"><img src="" class="icon medium" media='all' title="voor leeftijd van 3-6 jaar"></div>
-                                <div class="float-left"><img src="" class="icon medium" media='all' title="voor leeftijd van 6-9jaar"></div>
-                                <div class="float-left"><img src="" class="icon medium" media='all' title="grote van de speeltuin"></div>
-                                <div class="float-left"><img src="" class="icon medium" media='all' title="Normale prijsklasse"></div>
-                                <div class="float-left"><img src="" class="icon medium" media='all' title="mogelijkheid tot eten en drinken aanwezig"></div>
-                                <div class="float-left"><img src="" class="icon medium" media='all' title="WC aanwezig"></div>
-                                <div class="float-left"><p><img src="" class="icon medium" media='all' title="Afstand vanaf huidige locatie"> 2km</p></div>
+                                <div class="float-left"><img src="assets/img/age36.png" class="icon medium" media='all' title="voor leeftijd van 3-6 jaar"></div>
+                                <div class="float-left"><img src="assets/img/age69.png" class="icon medium" media='all' title="voor leeftijd van 6-9jaar"></div>
+                                <div class="float-left"><img src="assets/img/sizeM.png" class="icon medium" media='all' title="grote van de speeltuin"></div>
+                                <div class="float-left"><img src="assets/img/priceNormal.png" class="icon medium" media='all' title="Normale prijsklasse"></div>
+                                <div class="float-left"><img src="assets/img/fnb.png" class="icon medium" media='all' title="mogelijkheid tot eten en drinken aanwezig"></div>
+                                <div class="float-left"><img src="assets/img/wc.png" class="icon medium" media='all' title="WC aanwezig"></div>
+                                <div class="float-left"><p><img src="assets/img/from.png" class="icon medium" media='all' title="Afstand vanaf huidige locatie"> 2km</p></div>
                             </div>
                         </div>
                         <!-- Space underneath info icons -->
@@ -210,15 +175,15 @@
                 <div class="card border-left-primary" *ngFor="let playground of playgrounds$ | async">
                     <div class="card-body">
                             <div>
-                                
-                                <img src="" class="icon iconsm float-left" title="rating">
-                                <img src="" class="icon iconsm float-left" title="rating">
-                                <img src="" class="icon iconsm float-left" title="rating">
-                                <img src="" class="icon iconsm float-left" title="toegevoegd door">
-                                <img src="" class="icon iconsm float-left" title="geverifieerd">
-                                <img src="" class="icon iconsm float-left" title="voor leeftijd van 3-6 jaar">
-                                <img src="" class="icon iconsm float-left" title="voor leeftijd van 6-9jaar">
-                                <p><img src="" class="icon iconsm float-left" title="Afstand vanaf huidige locatie"> 2km</p>
+                                <h3>playground.name</h3>
+                                <img src="assets/img/rate.png" class="icon iconsm float-left" title="rating">
+                                <img src="assets/img/rate.png" class="icon iconsm float-left" title="rating">
+                                <img src="assets/img/rateHalf.png" class="icon iconsm float-left" title="rating">
+                                <img src="assets/img/addByUser.png" class="icon iconsm float-left" title="toegevoegd door">
+                                <img src="assets/img/verf.png" class="icon iconsm float-left" title="geverifieerd">
+                                <img src="assets/img/age36.png" class="icon iconsm float-left" title="voor leeftijd van 3-6 jaar">
+                                <img src="assets/img/age69.png" class="icon iconsm float-left" title="voor leeftijd van 6-9jaar">
+                                <p><img src="assets/img/from.png" class="icon iconsm float-left" title="Afstand vanaf huidige locatie"> 2km</p>
                             </div>
                     </div>
                 </div>
