@@ -13,6 +13,8 @@
 </div>
 
 <!-- add playground form field -->
+<form method="post" action="/signup" enctype="multipart/form-data">
+@csrf
 <div class="container mt-5"></div>
     <div class="row">
         <div class="col-md-3"></div>
@@ -320,4 +322,5 @@
             <div class="col-md-2"></div>
         </div>
     </div>
+</form>
 @endsection
