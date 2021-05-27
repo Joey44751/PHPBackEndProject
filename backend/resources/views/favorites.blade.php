@@ -1,6 +1,18 @@
 @extends('layout.theme')
-<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/favorites.css">
 @section('content')
+
+<!-- page title -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h1>FAVORIETEN</h1>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
 <!-- Input locations to search by -->
 <div class="container">
     <div class="row">
@@ -9,13 +21,12 @@
             <!-- Search by city -->
             <div class="input-group input-group-sm mt-3 mb-1">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-m">Gemeente</span>
+                    <span class="input-group-text" id="inputGroup-sizing-m">Naam</span>
                 </div>
-                <input type="text" class="form-control" name="hmCity" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input type="text" name="favName" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
             </div>
-            <div class="btn-group mt-0 mb-4">
-                <a href="#" class="btn btn-primary active" aria-current="page">toevoegen</a>
-                <a class="btn btn-primary" onclick="Geolocation">zoek</a>
+            <div class="btn-group mt-0 mb-4 d-flex justify-content-right">
+                <a href="#" class="btn btn-primary">zoek</a>
             </div>
             <!-- Use current location -->
             <div class="d-flex">
@@ -23,7 +34,7 @@
                 <p>Gebruik huidige locatie: </p>
 
                 <div class="ml-3 mb-3">
-                    <select class="form-select" name="hmDist" aria-label="Default select example">
+                    <select class="form-select" name="favDist" aria-label="Default select example">
                         <option selected>Afstand van huidige locatie tot</option>
                         <option value="1">straal van 5km</option>
                         <option value="2">straal van 10km</option>
@@ -31,8 +42,8 @@
                         <option value="4">straal van 20km</option>
                         <option value="5">straal van 30km</option>
                         <option value="6">straal van 40km</option>
-                        <option value="7">straal van 50km</option>
-                        <option value="8">>50km</option>
+                        <option value="6">straal van 50km</option>
+                        <option value="6">>50km</option>
                     </select>
                 </div>
             </div>
@@ -41,23 +52,18 @@
     </div>
 </div>
 
-<!-- Google maps witch search results / to be implemented -->
+<!-- Google maps witch search results -->
 <div class="container">
     <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <div class="">
-        <!-- <img src="../../assets/img/mapvb2.png" class="map" alt=""> -->
+        <!-- Googel maps box -->
         <google-map
         height="350px"
         width="100%"
         [center]="center"
-        [zoom]="zoom">
-            <map-marker      
-            [position]="position"
-          >
-          </map-marker>
-        </google-map>
+    ></google-map>
         </div>
     </div>
     <div class="col-md-2"></div>
@@ -74,96 +80,79 @@
 
                 <p class="mr-5 mb-3">Filteren: </p>
                 <!--age 0 - 3-->
-                <input type="checkbox" class="radio_age" value="" name="hmbaby" id="age1">
+                <input type="checkbox" class="radio_age" value="" name="favBaby" id="age1">
                 <label class="label_age" for="age1"> <img src="assets/img/age03.png" class="radioimg"> </label>
 
                 <!--age 3 - 6-->
-                <input type="checkbox" class="radio_age" value="" name="hmTodler" id="age2">
+                <input type="checkbox" class="radio_age" value="" name="favTodler" id="age2">
                 <label class="label_age" for="age2"> <img src="assets/img/age36.png" class="radioimg"> </label>
 
                 <!--age 6 - 9-->
-                <input type="checkbox" class="radio_age" value="" name="hmChild" id="age3">
+                <input type="checkbox" class="radio_age" value="" name="favChild" id="age3">
                 <label class="label_age" for="age3"> <img src="assets/img/age69.png" class="radioimg"> </label>
 
                 <!--age 9 - 12-->
-                <input type="checkbox" class="radio_age" value="" name="hmTeen" id="age4">
+                <input type="checkbox" class="radio_age" value="" name="favTeen" id="age4">
                 <label class="label_age" for="age4"> <img src="assets/img/age912.png" class="radioimg"> </label>
 
                 <!--small-->
-                <input type="checkbox" class="radio_item" value="" name="hmSmall" id="radio1">
+                <input type="checkbox" class="radio_item" value="" name="favSmall" id="radio1">
                 <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg"> </label>
 
                 <!--medium-->
-                <input type="checkbox" class="radio_item" value="" name="hmMedium" id="radio2">
+                <input type="checkbox" class="radio_item" value="" name="favMedium" id="radio2">
                 <label class="label_item" for="radio2"> <img src="assets/img/sizeM.png" class="radioimg"> </label>
 
                 <!--large-->
-                <input type="checkbox" class="radio_item" value="" name="hmLarge" id="radio3">
+                <input type="checkbox" class="radio_item" value="" name="favLarge" id="radio3">
                 <label class="label_item" for="radio3"> <img src="assets/img/sizeL.png" class="radioimg"> </label>
 
                 <!--extra large-->
-                <input type="checkbox" class="radio_item" value="" name="hmXl"id="radio4">
+                <input type="checkbox" class="radio_item" value="" name="favXl" id="radio4">
                 <label class="label_item" for="radio4"> <img src="assets/img/sizeXl.png" class="radioimg"> </label>
 
                 <!--Free-->
-                <input type="checkbox" class="radio_price" value="" name="hmFree" id="price1">
+                <input type="checkbox" class="radio_price" value="" name="favFree" id="price1">
                 <label class="label_price" for="price1"> <img src="assets/img/free.png" class="radioimg"> </label>
 
                 <!--cheap-->
-                <input type="checkbox" class="radio_price" value="" name="hmCheap" id="price2">
+                <input type="checkbox" class="radio_price" value="" name="favCheap"  id="price2">
                 <label class="label_price" for="price2"> <img src="assets/img/priceCheap.png" class="radioimg"> </label>
 
                 <!--normal-->
-                <input type="checkbox" class="radio_price" value="" name="hmNormal" id="price3">
+                <input type="checkbox" class="radio_price" value="" name="favNormal" id="price3">
                 <label class="label_price" for="price3"> <img src="assets/img/priceNormal.png" class="radioimg">
                 </label>
 
                 <!--expensive-->
-                <input type="checkbox" class="radio_price" value="" name="hmExpensive" id="price4">
+                <input type="checkbox" class="radio_price" value="" name="favExpensive" id="price4">
                 <label class="label_price" for="price4"> <img src="assets/img/priceExpensive.png" class="radioimg">
                 </label>
 
                 <!--Adults have to pay-->
-                <input type="checkbox" class="radio_price" value="" name="hmAdultEntry" id="price5">
+                <input type="checkbox" class="radio_price" value="" name="favFree" id="price5">
                 <label class="label_price" for="price5"> <img src="assets/img/priceAdult.png" class="radioimg"> </label>
 
                 <!-- Food and beverage -->
-                <input type="checkbox" class="radio_price" value="" name="hmFnb" id="fnb">
+                <input type="checkbox" class="radio_price" value="" name="favFnb"  id="fnb">
                 <label class="label_price" for="fnb"> <img src="assets/img/fnb.png" class="radioimg"> </label>
 
                 <!-- Food and beverage near -->
-                <input type="checkbox" class="radio_price" value="" name="hmFnbNear" id="fnbNear">
+                <input type="checkbox" class="radio_price" value="" name="favFnbNear" id="fnbNear">
                 <label class="label_price" for="fnbNear"> <img src="assets/img/fnbNear.png" class="radioimg"> </label>
 
                 <!-- Picknick allowed-->
-                <input type="checkbox" class="radio_price" value="" name="hmPickNick" id="pickNick">
+                <input type="checkbox" class="radio_price" value="" name="favPickNick" id="pickNick">
                 <label class="label_price" for="pickNick"> <img src="assets/img/fnbPickNick.png" class="radioimg">
                 </label>
 
                 <!-- Toilet present -->
-                <input type="checkbox" class="radio_price" value="" name="hmWc" id="wc">
+                <input type="checkbox" class="radio_price" value="" name="favWc" id="wc">
                 <label class="label_price" for="wc"> <img src="assets/img/wc.png" class="radioimg"></label>
 
                 <!-- Verified -->
-                <input type="checkbox" class="radio_price" value="" name="hmVerf" id="verf">
+                <input type="checkbox" class="radio_price" value="" name="favVerf" id="verf">
                 <label class="label_price" for="verf"> <img src="assets/img/verf.png" class="radioimg"></label>
-
-                <p>Rating</p>
-               <!--rating-->
-               <input type="checkbox" class="radio_age hmRateOne" value="" name="hmRate" id="hmRate">
-               <label class="label_age" for="hmRate"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
-                <!-- second star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateTwo" id="hmRateTwo">
-               <label class="label_age" for="hmRateTwo"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
-                <!-- third star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateThree" id="hmRateThree">
-               <label class="label_age" for="hmRateThree"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
-                <!-- fourth star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateFour" id="hmRateFour">
-               <label class="label_age" for="hmRateFour"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
-                <!-- fifth star -->
-               <input type="checkbox" class="radio_age" value="" name="hmRateFive" id="hmRateFive">
-               <label class="label_age" for="hmRateFive"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
 
                 <br>
 
@@ -219,22 +208,18 @@
                 <div id="checkWc">
                     <p class="info"> / WC aanwezig </p>
                 </div>
-               
+                <hr class="mt-0 mb-5">
                 
             </div>
-            <div class="btn-group mt-0 mb-4">
-                <a href="#" class="btn btn-primary active" aria-current="page">filters toepassen</a>
-            </div>
-            <hr class="mt-0 mb-5">
         </div>
         <div class="col-md-2"></div>
     </div>
-    
+
     <!-- Search results -->
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="card mb-3">
+            <div class="card mb-3" style="">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="../../assets/img/vb2.jpg" alt="..." class="img-thumbnail">
@@ -263,5 +248,5 @@
         </div>
         <div class="col-md-2"></div>
     </div>
-</div>
+
 @endsection
