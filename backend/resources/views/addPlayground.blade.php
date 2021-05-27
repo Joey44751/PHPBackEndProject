@@ -49,19 +49,11 @@
                             <div class="input-group input-group-sm mb-3">
                                 <!-- street -->
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"  id="inputGroup-sizing-sm">Straat</span>
+                                    <span class="input-group-text"  id="inputGroup-sizing-sm">Straat + nr</span>
                                 </div>
                                 <input type="text" class="form-control" name="street" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
-                            <div class="input-group input-group-sm mb-3">
-                                <!-- number -->
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-sm">Nummer</span>
-                                </div>
-                                <input type="number" #number name="homeNumber" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                            </div>
-                            
                             <div class="input-group input-group-sm mb-3">
                                 <!-- city -->
                                 <div class="input-group-prepend">
@@ -76,6 +68,14 @@
                                     <span class="input-group-text" id="inputGroup-sizing-sm">Postcode</span>
                                 </div>
                                 <input type="text" name="postal" #zip_code class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+
+                            <div class="input-group input-group-sm mb-3">
+                                <!-- number -->
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">website</span>
+                                </div>
+                                <input type="text" #number name="website" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                             </div>
 
                         </div>
@@ -118,19 +118,19 @@
                             <h4>Grote van de speeltuin</h4>
                           
                             <!--small-->
-                            <input type="radio" class="radio_item" value="small" name="item" id="radio1">
+                            <input type="radio" class="radio_item" value="small" name="size" id="radio1">
                             <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg" > </label>
 
                             <!--medium-->
-                            <input type="radio" class="radio_item" value="medium" name="item" id="radio2">
+                            <input type="radio" class="radio_item" value="medium" name="size" id="radio2">
                             <label class="label_item" for="radio2"> <img src="assets/img/sizeM.png" class="radioimg" > </label>
 
                              <!--large-->
-                             <input type="radio" class="radio_item" value="large" name="item" id="radio3">
+                             <input type="radio" class="radio_item" value="large" name="size" id="radio3">
                              <label class="label_item" for="radio3"> <img src="assets/img/sizeL.png" class="radioimg" > </label>
  
                              <!--extra large-->
-                             <input type="radio" class="radio_item" value="xl" name="item" id="radio4">
+                             <input type="radio" class="radio_item" value="xl" name="size" id="radio4">
                              <label class="label_item" for="radio4"> <img src="assets/img/sizeXl.png" class="radioimg" > </label>
 
                             <br>
@@ -192,7 +192,7 @@
                              <label class="label_price" for="price4"> <img src="assets/img/priceExpensive.png" class="radioimg" > </label>
 
                             <!--Adults have to pay-->
-                            <input type="checkbox" class="radio_price" value="adultEntry" name="price" id="price5">
+                            <input type="checkbox" class="radio_price" value="" name="adultEntry" id="price5">
                             <label class="label_price" for="price5"> <img src="assets/img/priceAdult.png" class="radioimg" > </label>
 
                             <br>
