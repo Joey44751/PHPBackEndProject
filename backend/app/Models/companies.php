@@ -7,14 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class companies extends Model
 {
+
+protected $guarded = [];
+    
     use HasFactory;
 
 public function size(){
-    return $this->hasone(Size::class);
+    return $this->hasOne(Size::class);
 }
 
 public function price(){
-    return $this->hasone(Price::class);
+    return $this->hasOne(Price::class);
 }
     
 }

@@ -13,7 +13,7 @@
 </div>
 
 <!-- add playground form field -->
-<form method="post" action="/signup" enctype="multipart/form-data">
+<form method="post" action="/addPg" enctype="multipart/form-data">
 @csrf
 <div class="container mt-5"></div>
     <div class="row">
@@ -315,7 +315,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                   <div class="btn-group mt-0 mb-4 d-flex justify-content-right">
-                    <a (click)="addNewPlayground(name.value,street.value,number.value,city.value,zip_code.value,extra.value)" class="btn btn-primary"> <span><i class="bi bi-plus-circle"></i></span> Voeg speeltuin toe</a>
+                    <a href="/addPg" class="btn btn-primary"> <span><i class="bi bi-plus-circle"></i></span> Voeg speeltuin toe</a>
                 </div>
                 <!-- Use current location -->
             </div>

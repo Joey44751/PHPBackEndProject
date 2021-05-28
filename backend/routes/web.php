@@ -36,3 +36,5 @@ Route::get('/favorites', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/addPg', 'CompanyController@Store');

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\compagnies
+use App\Models\companies
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -35,7 +35,30 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
+        // $validate = request()->validate([
+        //     'namePlayground' => 'required',
+        //     'street' => 'required',
+        //     'postal' => 'required',
+        //     'size.name' => 'required',
+        //     'price.name' => 'required',
+        // ]);
+
+        $company = Company::firstOrCreate([
+            'namePlayground' => $request->namePlayground,
+            'street' => $request->street,
+            'postal' => $request->postal,
+            // 'size.name' => $request->size,
+            // 'price.name' => $request->price,
+            // 'adultEntry' => $request->adultEntry,
+            // 'fnb'=> $request->fnb,
+            // 'fnbNear'=> $request->fnbNear,
+            // 'pickNick' =>$request->pickNick,
+            // 'wc'=> $request->wc,
+            // 'cityLs'=> $request->cityLs,
+            // 'fieldLs'=> $request->fieldLs,
+            // 'forestLs'=> $request->forestLs,
+        ])
     }
 
     /**
