@@ -30,20 +30,20 @@ class FortifyServiceProvider extends ServiceProvider
     {
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
-        Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
-        Fortify::resetUserPasswordsUsing(ResetUserPassword::class);
+/*         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
+        Fortify::resetUserPasswordsUsing(ResetUserPassword::class); */
 
         Fortify::loginView(function () {
-            return view('auth.login');
+            return view('login');
         });
         Fortify::registerView(function () {
-            return view('auth.register');
+            return view('login');
         });
-        Fortify::requestPasswordResetLinkView(function () {
-            return view('auth.passwords.email');
+/*         Fortify::requestPasswordResetLinkView(function () {
+            return view('passwords.email');
         });
         Fortify::resetPasswordView(function () {
-            return view('auth.passwords.reset');
-        });
+            return view('passwords.reset');
+        }); */
     }
 }
