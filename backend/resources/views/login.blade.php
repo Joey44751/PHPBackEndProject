@@ -38,7 +38,8 @@
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-signin" role="tabpanel" aria-labelledby="pills-signin-tab">
           <div class="col-sm-12 border border shadow rounded pt-2">
-            <form id="singninFrom">
+            <form id="singninFrom" method="POST" action="{{ route('login')}}">
+              @csrf
               <div class="form-group">
                 <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
                 <input type="email" #emailLogin name="email" id="email" class="form-control"
@@ -60,9 +61,12 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="button" (click)="authService.SignIn(emailLogin.value,passwordLogin.value)" name="submit"
+                <input type="submit"  name="submit"
                   value="Sign In" class="btn btn-block btn-primary">
               </div>
+              @foreach($errors->all() as $error)
+                  <li>{{$error}}</li>  
+              @endforeach   
             </form>
               <!-- Continue with google button -->
               <div class="container mb-2">
@@ -70,7 +74,7 @@
                   <div class="col-md-2"></div>
                   <div class="col-md-8">
                     <div class="formGroup text-center">
-                      <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+                      <button type="button" class="btn googleBtn">
                         <i class="fab fa-google-plus-g"></i>
                         Continue with Google
                       </button>
@@ -84,35 +88,36 @@
         <!-- Sign up form tab -->
         <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab">
           <div class="col-sm-12 border border shadow rounded pt-2">
-            <form id="singnupFrom">
+            <form id="singnupFrom" method='POST' action="{{ route('register')}}">
+            @csrf
               <!-- Choose username and set phone number -->
               <div class="form-group">
                 <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
-                <input type="email" #registerEmail name="signupemail" id="signupemail" class="form-control"
+                <input type="email" #registerEmail name="email" id="signupemail" class="form-control"
                   placeholder="Enter valid email" required>
               </div>
-              <div class="form-group">
-                <label class="font-weight-bold">User Name <span class="text-danger">*</span></label>
-                <input type="text" name="signupusername" id="signupusername" class="form-control"
-                  placeholder="Choose your user name" required>
+               <div class="form-group">
+                <label class="font-weight-bold">Name <span class="text-danger">*</span></label>
+                <input type="text" name="name" id="name" class="form-control"
+                  placeholder="Enter your name" required>
                 <div class="text-danger"></div>
-              </div>
-              <div class="form-group">
+              </div> 
+<!--               <div class="form-group">
                 <label class="font-weight-bold">Phone #</label>
                 <input type="text" name="signupphone" id="signupphone" class="form-control"
                   placeholder="(000)-(0000000)">
-              </div>
+              </div> -->
               <!-- Set new password -->
               <div class="form-group">
                 <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
-                <input type="password" #registerPass name="signuppassword" id="signuppassword" class="form-control"
-                  placeholder="***********" pattern="^\S{6,}$"
-                  onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;"
+                <input type="password" #registerPass name="password" id="signuppassword" class="form-control"
+                  placeholder="***********" pattern="^\S{8,}$"
+                  onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;"
                   required>
               </div>
               <div class="form-group">
                 <label class="font-weight-bold">Confirm Password <span class="text-danger">*</span></label>
-                <input type="password" #registerPass2 name="signupcpassword" id="signupcpassword" class="form-control"
+                <input type="password" #registerPass2 name="password_confirmation" id="signupcpassword" class="form-control"
                   pattern="^\S{6,}$"
                   onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');"
                   placeholder="***********" required>
@@ -123,9 +128,12 @@
                     href="javascript:;">Terms &amp; Conditions</a> for Registration.</label>
               </div>
               <div class="form-group">
-                <input type="button" (click)="authService.SignUp(registerEmail.value,registerPass.value,registerPass2.value)"
+                <input type="submit" 
                   name="signupsubmit" value="Sign Up" class="btn btn-block btn-primary">
               </div>
+              @foreach($errors->all() as $error)
+                  <li>{{$error}}</li>  
+              @endforeach   
             </form>
               <!-- Continue with google button -->
               <div class="container mb-2">
@@ -133,7 +141,7 @@
                   <div class="col-md-2"></div>
                   <div class="col-md-8">
                     <div class="formGroup text-center">
-                      <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+                      <button type="button" class="btn googleBtn"">
                         <i class="fab fa-google-plus-g"></i>
                         Continue with Google
                       </button>
@@ -150,7 +158,7 @@
     <!-- Modal -->
     <div class="modal fade" id="forgotPass" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <form id="forgotpassForm">
+        <form id="forgotpassForm" >
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Forgot Password</h5>
@@ -176,7 +184,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> 
 
 
 <!-- Functionality scripts -->
