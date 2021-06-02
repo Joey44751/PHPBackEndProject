@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Company;
 
-class prices extends Model
+class sizes extends Model
 {
     use HasFactory;
 
-    public function companies(){
+    public function company(){
         return $this->belongsTo(Company::class);
     }
 

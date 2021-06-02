@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Company;
+use App\Models\Price;
+use App\Models\Size;
+use App\Models\Favorite;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +40,5 @@ Route::get('/favorites', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/addPg', 'App\Http\Controllers\CompanyController@store');

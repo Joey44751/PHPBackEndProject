@@ -12,8 +12,26 @@
     </div>
 </div>
 
+@if ($errors->any())
+<div class="container mt-4">
+    <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    </div>
+</div>
+@endif
+
 <!-- add playground form field -->
-<form method="post" action="/signup" enctype="multipart/form-data">
+<form method="post" action="/addPg" enctype="multipart/form-data">
 @csrf
 <div class="container mt-5"></div>
     <div class="row">
@@ -315,7 +333,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                   <div class="btn-group mt-0 mb-4 d-flex justify-content-right">
-                    <a (click)="addNewPlayground(name.value,street.value,number.value,city.value,zip_code.value,extra.value)" class="btn btn-primary"> <span><i class="bi bi-plus-circle"></i></span> Voeg speeltuin toe</a>
+                   <button type="submit" class="btn"><span><i class="bi bi-plus-circle"></i></span> Voeg speeltuin toe</a></button>
                 </div>
                 <!-- Use current location -->
             </div>
