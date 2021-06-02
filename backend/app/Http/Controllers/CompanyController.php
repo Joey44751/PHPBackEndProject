@@ -44,7 +44,7 @@ class CompanyController extends Controller
         //     'price.name' => 'required',
         // ]);
 
-        $company = Company::firstOrCreate([
+        $companies = Company::firstOrCreate([
             'namePlayground' => $request->namePlayground,
             'street' => $request->street,
             'postal' => $request->postal,
@@ -58,7 +58,7 @@ class CompanyController extends Controller
             // 'cityLs'=> $request->cityLs,
             // 'fieldLs'=> $request->fieldLs,
             // 'forestLs'=> $request->forestLs,
-        ])
+        ]);
     }
 
     /**

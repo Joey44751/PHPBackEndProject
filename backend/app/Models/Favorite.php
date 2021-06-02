@@ -14,6 +14,6 @@ class favorites extends Model
     }
     
     public function user(){
-        return $this->hasone(User::class);
+        return $this->hasOne(User::class);
     }
 }

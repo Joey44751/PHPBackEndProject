@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\companies;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +38,4 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::post('/addPg', 'CompanyController@Store');
+Route::post('/addPg', 'App\Http\Controllers\CompanyController@store');
