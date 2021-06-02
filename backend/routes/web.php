@@ -22,18 +22,22 @@ Route::get('/', function () {
 });
 
 Route::get('/playground', function () {
+    Mapper::map(50.964499, 5.409432);
     return view('playground');
 });
 
 Route::get('/home', function () {
+    Mapper::map(50.964499, 5.409432);
     return view('home');
 });
 
 Route::get('/addplayground', function () {
+    Mapper::map(50.964499, 5.409432);
     return view('addplayground');
 });
 
 Route::get('/favorites', function () {
+    Mapper::map(50.964499, 5.409432);
     return view('favorites');
 });
 

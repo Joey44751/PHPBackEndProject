@@ -162,12 +162,8 @@
             <div class="col-md-4">
                 <hr>
                 <!--Google map-->
-                <div>
-                    <google-map
-                    height="300px"
-                    width="100%"
-                    [center]="center"
-                ></google-map>
+                <div class="col-md-6 mt-2 mb-3" style="width: 100%; height: 300px;">
+                    {!! Mapper::render() !!}
                 </div>
                 <!-- card with other playgrounds -->
             </div>
