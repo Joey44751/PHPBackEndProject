@@ -15,6 +15,7 @@ class companies extends Model
     public function size(){
     return $this->hasOne(Size::class);
     }
+    
     public function price(){
     return $this->hasOne(Price::class);
     }

@@ -42,8 +42,8 @@ class CompanyController extends Controller
             'namePlayground' => 'required',
             'street' => 'required',
             'postal' => 'required',
-        //     'size.name' => 'required',
-        //     'price.name' => 'required',
+            'size' => 'required',
+            'price' => 'required',
         ]);
 
         $company = Company::firstOrCreate([

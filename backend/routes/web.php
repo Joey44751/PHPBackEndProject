@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\companies;
+use App\Models\Company;
+use App\Models\Price;
+use App\Models\Size;
+use App\Models\Favorite;
 
 /*
 |--------------------------------------------------------------------------
