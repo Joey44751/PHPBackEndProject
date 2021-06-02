@@ -136,7 +136,7 @@
                             <h4>Grote van de speeltuin</h4>
                           
                             <!--small-->
-                            <input type="radio" class="radio_item" value="small" name="size" id="radio1">
+                            <input type="radio" class="radio_item" value="1" name="size" id="radio1">
                             <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg" > </label>
 
                             <!--medium-->

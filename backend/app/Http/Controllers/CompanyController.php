@@ -61,6 +61,7 @@ class CompanyController extends Controller
             // 'fieldLs'=> $request->fieldLs,
             // 'forestLs'=> $request->forestLs,
         ]);
+        return view('home');
     }
 
     /**
