@@ -46,9 +46,9 @@ class CompanyController extends Controller
             'price' => 'required',
         ]);
 
-        $company = Company::firstOrCreate([
-            'namePlayground' => $request->namePlayground,
-            'street' => $request->street,
+        $company = Company::firstOrCreate(
+            ['namePlayground' => $request->namePlayground],
+            ['street' => $request->street,
             'postal' => $request->postal,
             'website' => $request->website,
             'description' => $request->descr,
@@ -67,9 +67,9 @@ class CompanyController extends Controller
         if ($company->wasRecentlyCreated){
             toast('Speeltuin succesvol toegevoegd, bedankt voor uw bijdrage!','success')->autoClose(5000)->position('middle');
             return view('Playground');
-        } else {
+            } else {
             toast('Deze speeltuin is reeds toegevoegd.','warning')->autoClose(5000)->position('middle');
-
+            return view('addPlayground');
         };
     }
 
