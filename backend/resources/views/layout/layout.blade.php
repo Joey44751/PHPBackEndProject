@@ -13,6 +13,7 @@
     <title>The Parentapp</title>
   </head>
   <body>
+    @include('sweetalert::alert')
     <h1></h1>
     @yield('content')
     <!-- Optional JavaScript; choose one of the two! -->

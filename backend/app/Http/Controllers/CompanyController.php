@@ -63,7 +63,14 @@ class CompanyController extends Controller
             'fieldLs'=> $request->fieldLs,
             'forestLs'=> $request->forestLs,
         ]);
-        return view('home');
+
+        if ($company->wasRecentlyCreated){
+            toast('Speeltuin succesvol toegevoegd, bedankt voor uw bijdrage!','success')->autoClose(5000)->position('middle');
+            return view('Playground');
+        } else {
+            toast('Deze speeltuin is reeds toegevoegd.','warning')->autoClose(5000)->position('middle');
+
+        };
     }
 
     /**
