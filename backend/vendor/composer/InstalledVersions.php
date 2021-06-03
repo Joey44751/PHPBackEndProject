@@ -25,11 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => 'dev-Niels-HTML/CSS-&-assets',
+    'version' => 'dev-Niels-HTML/CSS-&-assets',
     'aliases' => 
     array (
     ),
+    'reference' => '5b0b41648bd8602ca484d574f62ee5469b7624ef',
     'reference' => '481a7664ff935f42843be4cbf15750729f48e575',
     'name' => 'laravel/laravel',
   ),
@@ -491,12 +492,13 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => 'dev-Niels-HTML/CSS-&-assets',
+      'version' => 'dev-Niels-HTML/CSS-&-assets',
       'aliases' => 
       array (
       ),
-      'reference' => '481a7664ff935f42843be4cbf15750729f48e575',
+      'reference' => '5b0b41648bd8602ca484d574f62ee5469b7624ef',
+      'reference' => '481a7664ff935f42843be4cbf15750729f48e575'
     ),
     'laravel/sail' => 
     array (
@@ -877,6 +879,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'cd4032040a750077205918c86049aa0f43d22947',
+    ),
+    'realrashid/sweet-alert' => 
+    array (
+      'pretty_version' => 'v3.2.3',
+      'version' => '3.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd4e40b4956e1f040bd709d54410b360023cea67f',
     ),
     'rhumsaa/uuid' => 
     array (
@@ -1563,6 +1574,7 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
+
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];

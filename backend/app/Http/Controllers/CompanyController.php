@@ -46,21 +46,31 @@ class CompanyController extends Controller
             'price' => 'required',
         ]);
 
-        $company = Company::firstOrCreate([
-            'namePlayground' => $request->namePlayground,
-            'street' => $request->street,
+        $company = Company::firstOrCreate(
+            ['namePlayground' => $request->namePlayground],
+            ['street' => $request->street,
             'postal' => $request->postal,
-            // 'size.name' => $request->size,
-            // 'price.name' => $request->price,
-            // 'adultEntry' => $request->adultEntry,
-            // 'fnb'=> $request->fnb,
-            // 'fnbNear'=> $request->fnbNear,
-            // 'pickNick' =>$request->pickNick,
-            // 'wc'=> $request->wc,
-            // 'cityLs'=> $request->cityLs,
-            // 'fieldLs'=> $request->fieldLs,
-            // 'forestLs'=> $request->forestLs,
+            'website' => $request->website,
+            'description' => $request->descr,
+            'size_id' => $request->size,
+            'price_id' => $request->price,
+            'adultEntry' => $request->adultEntry,
+            'fnb'=> $request->fnb,
+            'fnbNear'=> $request->fnbNear,
+            'pickNick' =>$request->pickNick,
+            'wc'=> $request->wc,
+            'cityLs'=> $request->cityLs,
+            'fieldLs'=> $request->fieldLs,
+            'forestLs'=> $request->forestLs,
         ]);
+
+        if ($company->wasRecentlyCreated){
+            toast('Speeltuin succesvol toegevoegd, bedankt voor uw bijdrage!','success')->autoClose(5000)->position('middle');
+            return view('Playground');
+            } else {
+            toast('Deze speeltuin is reeds toegevoegd.','warning')->autoClose(5000)->position('middle');
+            return view('addPlayground');
+        };
     }
 
     /**

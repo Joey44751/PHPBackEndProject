@@ -24,7 +24,7 @@
     <title>The Parent App</title>
 </head>
 <body>
-    
+    @include('sweetalert::alert') 
 
 <!-- pink section, navigation bar -->
 <nav class="navbar navbar-expand-md navbar-dark balk">
