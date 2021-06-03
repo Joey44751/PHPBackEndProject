@@ -57,13 +57,8 @@
     <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <div class="">
-        <!-- Googel maps box -->
-        <google-map
-        height="350px"
-        width="100%"
-        [center]="center"
-    ></google-map>
+        <div class="col-md-6 mt-2 mb-3" style="width: 100%; height: 300px;">
+            {!! Mapper::render() !!}
         </div>
     </div>
     <div class="col-md-2"></div>

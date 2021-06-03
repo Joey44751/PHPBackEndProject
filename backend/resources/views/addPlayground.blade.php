@@ -98,13 +98,8 @@
 
                         </div>
                         <!-- placeholder image, interactive google maps to be added -->
-                        <div class="col-md-6 mt-2 mb-3">
-                            <!-- <img src="assets/img/vbmaps.png" class="img-fluid" alt=""> -->
-                            <google-map
-                            height="350px"
-                            width="100%"
-                            [center]="center"
-                        ></google-map>
+                        <div class="col-md-6 mt-2 mb-3" style="width: 100%; height: 300px;">
+                            {!! Mapper::render() !!}
                         </div>
                     </div>
 
