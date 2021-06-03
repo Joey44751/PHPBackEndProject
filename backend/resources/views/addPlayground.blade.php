@@ -140,15 +140,15 @@
                             <label class="label_item" for="radio1"> <img src="assets/img/sizeS.png" class="radioimg" > </label>
 
                             <!--medium-->
-                            <input type="radio" class="radio_item" value="medium" name="size" id="radio2">
+                            <input type="radio" class="radio_item" value="2" name="size" id="radio2">
                             <label class="label_item" for="radio2"> <img src="assets/img/sizeM.png" class="radioimg" > </label>
 
                              <!--large-->
-                             <input type="radio" class="radio_item" value="large" name="size" id="radio3">
+                             <input type="radio" class="radio_item" value="3" name="size" id="radio3">
                              <label class="label_item" for="radio3"> <img src="assets/img/sizeL.png" class="radioimg" > </label>
  
                              <!--extra large-->
-                             <input type="radio" class="radio_item" value="xl" name="size" id="radio4">
+                             <input type="radio" class="radio_item" value="4" name="size" id="radio4">
                              <label class="label_item" for="radio4"> <img src="assets/img/sizeXl.png" class="radioimg" > </label>
 
                             <br>
@@ -194,19 +194,19 @@
                             <h4>Entreegeld</h4>
                           
                             <!--Free-->
-                            <input type="radio" class="radio_price" value="free" name="price" id="price1">
+                            <input type="radio" class="radio_price" value="1" name="price" id="price1">
                             <label class="label_price" for="price1"> <img src="assets/img/free.png" class="radioimg" > </label>
 
                             <!--cheap-->
-                            <input type="radio" class="radio_price" value="cheap" name="price" id="price2">
+                            <input type="radio" class="radio_price" value="2" name="price" id="price2">
                             <label class="label_price" for="price2"> <img src="assets/img/priceCheap.png" class="radioimg" > </label>
 
                              <!--normal-->
-                             <input type="radio" class="radio_price" value="normal" name="price" id="price3">
+                             <input type="radio" class="radio_price" value="3" name="price" id="price3">
                              <label class="label_price" for="price3"> <img src="assets/img/priceNormal.png" class="radioimg" > </label>
  
                              <!--expensive-->
-                             <input type="radio" class="radio_price" value="expensive" name="price" id="price4">
+                             <input type="radio" class="radio_price" value="4" name="price" id="price4">
                              <label class="label_price" for="price4"> <img src="assets/img/priceExpensive.png" class="radioimg" > </label>
 
                             <!--Adults have to pay-->
@@ -230,31 +230,31 @@
                             <h4>Algemene informatie</h4>
 
                             <!-- Food and beverage -->
-                            <input type="checkbox" class="radio_price" value="" name="fnb" id="fnb">
+                            <input type="checkbox" class="radio_price" value="1" name="fnb" id="fnb">
                             <label class="label_price" for="fnb"> <img src="assets/img/fnb.png" class="radioimg" > </label>
 
                             <!-- Food and beverage near -->
-                            <input type="checkbox" class="radio_price" value="" name="fnbNear" id="fnbNear">
+                            <input type="checkbox" class="radio_price" value="1" name="fnbNear" id="fnbNear">
                             <label class="label_price" for="fnbNear"> <img src="assets/img/fnbNear.png" class="radioimg" > </label>
 
                             <!-- Picknick allowed-->
-                            <input type="checkbox" class="radio_price" value="" name="pickNick" id="pickNick">
+                            <input type="checkbox" class="radio_price" value="1" name="pickNick" id="pickNick">
                             <label class="label_price" for="pickNick"> <img src="assets/img/fnbPickNick.png" class="radioimg" > </label>
 
                             <!-- Toilet present -->
-                            <input type="checkbox" class="radio_price" value="" name="wc" id="wc">
+                            <input type="checkbox" class="radio_price" value="1" name="wc" id="wc">
                             <label class="label_price" for="wc"> <img src="assets/img/wc.png" class="radioimg" > </label>
 
                             <!-- City enviroment -->
-                            <input type="checkbox" class="radio_price" value="" name="cityLs" id="city">
+                            <input type="checkbox" class="radio_price" value="1" name="cityLs" id="city">
                             <label class="label_price" for="city"> <img src="assets/img/lsCity.png" class="radioimg" > </label>
 
                              <!-- Field enviroment -->
-                             <input type="checkbox" class="radio_price" value="" name="fieldLs" id="field">
+                             <input type="checkbox" class="radio_price" value="1" name="fieldLs" id="field">
                              <label class="label_price" for="field"> <img src="assets/img/lsField.png" class="radioimg" > </label>
 
                               <!-- Forest enviroment -->
-                            <input type="checkbox" class="radio_price" value="" name="forestLs" id="forest">
+                            <input type="checkbox" class="radio_price" value="1" name="forestLs" id="forest">
                             <label class="label_price" for="forest"> <img src="assets/img/lsForest.png" class="radioimg" > </label>
 
                             <br>
