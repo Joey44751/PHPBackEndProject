@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => 'dev-Niels-HTML/CSS-&-assets',
+    'version' => 'dev-Niels-HTML/CSS-&-assets',
     'aliases' => 
     array (
     ),
-    'reference' => 'd3ba4fc701ef36b1cd037aa35bf9985de6c964bb',
+    'reference' => '5b0b41648bd8602ca484d574f62ee5469b7624ef',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -458,12 +458,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => 'dev-Niels-HTML/CSS-&-assets',
+      'version' => 'dev-Niels-HTML/CSS-&-assets',
       'aliases' => 
       array (
       ),
-      'reference' => 'd3ba4fc701ef36b1cd037aa35bf9985de6c964bb',
+      'reference' => '5b0b41648bd8602ca484d574f62ee5469b7624ef',
     ),
     'laravel/sail' => 
     array (
@@ -844,6 +844,15 @@
       array (
       ),
       'reference' => 'cd4032040a750077205918c86049aa0f43d22947',
+    ),
+    'realrashid/sweet-alert' => 
+    array (
+      'pretty_version' => 'v3.2.3',
+      'version' => '3.2.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd4e40b4956e1f040bd709d54410b360023cea67f',
     ),
     'rhumsaa/uuid' => 
     array (
