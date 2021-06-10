@@ -236,6 +236,22 @@
                             <h5 class="card-title">{{$company->namePlayground}}</h5>
                             </div>
                             <div>
+                                {{-- show icons concerning price of playground --}}
+                                @if(($company->price_id)==1)
+                                <img src="../../assets/img/free.png" title="inkom gratis" class="icon">
+                                @endif
+                                @if(($company->price_id)==2)
+                                <img src="../../assets/img/priceCheap.png" title="goedkope inkom" class="icon">
+                                @endif
+                                @if(($company->price_id)==3)
+                                <img src="../../assets/img/priceNormal.png" title="aanvaardbare inkomprijs" class="icon">
+                                @endif
+                                @if(($company->price_id)==4)
+                                <img src="../../assets/img/priceExpensive.png" title="dure inkomprijs" class="icon">
+                                @endif
+                                @if(($company->adultEntry))
+                                <img src="../../assets/img/priceAdult.png" title="volwassenen dienen ook te betalen" class="icon">
+                                @endif
                                 {{-- Show icons: playground for ages --}}
                                 @if(($company->baby)==1)
                                 <img src="../../assets/img/age36.png" title="voor kinderen van 0 tot 3 jaar" class="icon">
@@ -249,7 +265,20 @@
                                 @if(($company->teen)==1)
                                 <img src="../../assets/img/age912.png" title="voor kinderen van 9 tot 12 jaar" class="icon">
                                 @endif
-                                  {{-- show icons for general information --}}
+                                {{-- show icons concerning size of playground --}}
+                                @if(($company->size_id)==1)
+                                <img src="../../assets/img/sizeS.png" title="kleine speeltuin" class="icon">
+                                @endif
+                                @if(($company->size_id)==2)
+                                <img src="../../assets/img/sizeM.png" title="Speeltuin van een normale omvang" class="icon">
+                                @endif
+                                @if(($company->size_id)==3)
+                                <img src="../../assets/img/sizeL.png" title="grote speeltuin" class="icon">
+                                @endif
+                                @if(($company->size_id)==4)
+                                <img src="../../assets/img/sizeXl.png" title="zeer grote speeltuin" class="icon">
+                                @endif
+                                {{-- show icons for general information --}}
                                 @if(($company->fnb)==1)
                                 <img src="../../assets/img/fnb.png" title="Mogelijkheid voor eten en drinken ter plaatse" class="icon">
                                 @endif
