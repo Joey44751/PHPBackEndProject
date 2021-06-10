@@ -236,12 +236,42 @@
                             <h5 class="card-title">{{$company->namePlayground}}</h5>
                             </div>
                             <div>
-                                <img src="../../assets/img/age36.png" title="" class="icon">
-                                <img src="../../assets/img/age69.png" class="icon">
-                                <img src="../../assets/img/sizeM.png" title="" class="icon">
-                                <img src="../../assets/img/priceExpensive.png" class="icon">
-                                <img src="../../assets/img/priceAdult.png" class="icon">
-                                <img src="../../assets/img/wc.png" class="icon">
+                                {{-- Show icons: playground for ages --}}
+                                @if(($company->baby)==1)
+                                <img src="../../assets/img/age36.png" title="voor kinderen van 0 tot 3 jaar" class="icon">
+                                @endif
+                                @if(($company->todler)==1)
+                                <img src="../../assets/img/age36.png" title="voor kinderen van 3 tot 6 jaar" class="icon">
+                                @endif
+                                @if(($company->child)==1)
+                                <img src="../../assets/img/age69.png" title="voor kinderen van 6 tot 9 jaar" class="icon">
+                                @endif
+                                @if(($company->teen)==1)
+                                <img src="../../assets/img/age912.png" title="voor kinderen van 9 tot 12 jaar" class="icon">
+                                @endif
+                                  {{-- show icons for general information --}}
+                                @if(($company->fnb)==1)
+                                <img src="../../assets/img/fnb.png" title="Mogelijkheid voor eten en drinken ter plaatse" class="icon">
+                                @endif
+                                @if(($company->fnbNear)==1)
+                                <img src="../../assets/img/fnbNear.png" title="Mogelijkheid voor eten of drinken dicht bij locatie" class="icon">
+                                @endif
+                                @if(($company->pickNick)==1)
+                                <img src="../../assets/img/fnbPickNick.png" title="Picknick is toegestaan" class="icon">
+                                @endif
+                                @if(($company->wc)==1)
+                                <img src="../../assets/img/wc.png" title="wc aanwezig op locatie" class="icon">
+                                @endif
+                                @if(($company->cityLs)==1)
+                                <img src="../../assets/img/lsCity.png" title="stedlijke omgeving" class="icon">
+                                @endif
+                                @if(($company->fieldLs)==1)
+                                <img src="../../assets/img/lsField.png" title="landelijke omgeving" class="icon">
+                                @endif
+                                @if(($company->forestLs)==1)
+                                <img src="../../assets/img/lsForest.png" title="bosrijke omgeving" class="icon">
+                                @endif
+
                             </div>
                             <div class="d-flex justify-content-left mt-2">
                                 <img src="../../assets/img/from.png" title="" class="bi mr-1">
