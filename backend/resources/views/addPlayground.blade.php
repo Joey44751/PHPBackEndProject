@@ -264,7 +264,25 @@
                             <div id="checkForest"><p class="info"> / In een bosrijke omgeving </p></div>   
 
                         </div>
-                        <div class="col-md-7 mt-5"> </div>
+                        <div class="col-md-7">
+                            <h4>Rating</h4>
+                            <!--rating-->
+                            <input type="checkbox" class="radio_age hmRateOne" value="1" name="hmRate" id="hmRate">
+                            <label class="label_age" for="hmRate"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- second star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateTwo" id="hmRateTwo">
+                            <label class="label_age" for="hmRateTwo"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- third star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateThree" id="hmRateThree">
+                            <label class="label_age" for="hmRateThree"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- fourth star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateFour" id="hmRateFour">
+                            <label class="label_age" for="hmRateFour"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- fifth star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateFive" id="hmRateFive">
+                            <label class="label_age" for="hmRateFive"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                        
+                        </div>
                     </div>
                     <hr>
                     <div class="row">

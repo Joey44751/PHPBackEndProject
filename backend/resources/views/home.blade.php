@@ -302,9 +302,26 @@
                                 @endif
 
                             </div>
-                            <div class="d-flex justify-content-left mt-2">
-                                <img src="../../assets/img/from.png" title="" class="bi mr-1">
-                                <p>5km</p>
+                            <div class="mt-2">
+                                {{-- shows playground rating --}}
+                                @if(($company->rateOne)==1)
+                                <img src="../../assets/img/rate.png" title="Slecht" class="bi">
+                                @endif
+                                @if(($company->rateTwo)==1)
+                                <img src="../../assets/img/rate.png" title="ok" class="bi">
+                                @endif
+                                @if(($company->rateThree)==1)
+                                <img src="../../assets/img/rate.png" title="goed" class="bi">
+                                @endif
+                                @if(($company->rateFour)==1)
+                                <img src="../../assets/img/rate.png" title="zeer goed" class="bi">
+                                @endif
+                                @if(($company->rateFive)==1)
+                                <img src="../../assets/img/rate.png" title="uitstekend" class="bi">
+                                @endif
+                                 {{-- shows distance from current location to playground --}}
+                                 <p><img src="../../assets/img/from.png" title="" class="bi mr-1"> 5km</p>
+                              
                             </div>
                         </div>
                     </div>
