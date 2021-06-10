@@ -16,9 +16,13 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+     //  
     }
 
+    public function detail($id) {
+        $company = Company::where('id', $id)->firstOrFail();
+        return view('playground',compact('company'));
+    }
     /**
      * Show the form for creating a new resource.
      *

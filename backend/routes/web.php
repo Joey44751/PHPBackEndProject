@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\PlaygroundController;
 use App\Models\Company;
 use App\Models\Price;
 use App\Models\Size;
@@ -21,10 +23,10 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/playground', function () {
-    Mapper::map(50.964499, 5.409432);
-    return view('playground');
-});
+// Route::get('/playground', function () {
+//     Mapper::map(50.964499, 5.409432);
+//     return view('playground');
+// });
 
 Route::get('/home', function () {
     Mapper::map(50.964499, 5.409432);
@@ -49,3 +51,5 @@ Route::get('/contact', function () {
 });
 
 Route::post('/addPg', 'App\Http\Controllers\CompanyController@store');
+
+Route::get('/playground/{id}','App\Http\Controllers\CompanyController@detail');
