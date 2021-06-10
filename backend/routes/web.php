@@ -49,3 +49,7 @@ Route::get('/contact', function () {
 });
 
 Route::post('/addPg', 'App\Http\Controllers\CompanyController@store');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
