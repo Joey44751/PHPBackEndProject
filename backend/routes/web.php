@@ -28,7 +28,8 @@ Route::get('/playground', function () {
 
 Route::get('/home', function () {
     Mapper::map(50.964499, 5.409432);
-    return view('home');
+    $companies = App\Models\Company::get();
+    return view('home', compact('companies'));
 });
 
 Route::get('/addplayground', function () {

@@ -224,6 +224,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+            @foreach($companies as $company)
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
@@ -232,7 +233,7 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <div>
-                            <h5 class="card-title">Naam speeltuin </h5>
+                            <h5 class="card-title">{{$company->namePlayground}}</h5>
                             </div>
                             <div>
                                 <img src="../../assets/img/age36.png" title="" class="icon">
@@ -250,6 +251,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="col-md-2"></div>
     </div>
