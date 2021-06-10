@@ -160,19 +160,19 @@
                             <h4>Voor leeftijd</h4>
                           
                             <!--age 0 - 3-->
-                            <input type="checkbox" class="radio_age" value="" name="baby" id="age1">
+                            <input type="checkbox" class="radio_age" value="1" name="baby" id="age1">
                             <label class="label_age" for="age1"> <img src="assets/img/age03.png" class="radioimg" > </label>
 
                             <!--age 3 - 6-->
-                            <input type="checkbox" class="radio_age" value="" name="todler" id="age2">
+                            <input type="checkbox" class="radio_age" value="1" name="todler" id="age2">
                             <label class="label_age" for="age2"> <img src="assets/img/age36.png" class="radioimg" > </label>
 
                              <!--age 6 - 9-->
-                             <input type="checkbox" class="radio_age" value="" name="child" id="age3">
+                             <input type="checkbox" class="radio_age" value="1" name="child" id="age3">
                              <label class="label_age" for="age3"> <img src="assets/img/age69.png" class="radioimg" > </label>
  
                              <!--age 9 - 12-->
-                             <input type="checkbox" class="radio_age" value="" name="teen" id="age4">
+                             <input type="checkbox" class="radio_age" value="1" name="teen" id="age4">
                              <label class="label_age" for="age4"> <img src="assets/img/age912.png" class="radioimg" > </label>
 
                             <br>
