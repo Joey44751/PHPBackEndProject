@@ -62,6 +62,11 @@ class CompanyController extends Controller
             'cityLs'=> $request->cityLs,
             'fieldLs'=> $request->fieldLs,
             'forestLs'=> $request->forestLs,
+            'baby'=> $request->baby,
+            'todler'=> $request->todler,
+            'child'=> $request->child,
+            'teen'=> $request->teen
+            
         ]);
 
         if ($company->wasRecentlyCreated){
