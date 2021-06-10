@@ -46,7 +46,7 @@
     <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <div class="col-md-6 mt-2 mb-3" style="width: 100%; height: 300px;">
+        <div class=" mt-2 mb-3" style="width: 100%; height: 500px;">
             {!! Mapper::render() !!}
         </div>
     </div>
@@ -224,6 +224,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+            @foreach($companies as $company)
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
@@ -232,24 +233,101 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <div>
-                            <h5 class="card-title">Naam speeltuin </h5>
+                            <h5 class="card-title">{{$company->namePlayground}}</h5>
                             </div>
                             <div>
-                                <img src="../../assets/img/age36.png" title="" class="icon">
-                                <img src="../../assets/img/age69.png" class="icon">
-                                <img src="../../assets/img/sizeM.png" title="" class="icon">
-                                <img src="../../assets/img/priceExpensive.png" class="icon">
-                                <img src="../../assets/img/priceAdult.png" class="icon">
-                                <img src="../../assets/img/wc.png" class="icon">
+                                {{-- show icons concerning price of playground --}}
+                                @if(($company->price_id)==1)
+                                <img src="../../assets/img/free.png" title="inkom gratis" class="icon">
+                                @endif
+                                @if(($company->price_id)==2)
+                                <img src="../../assets/img/priceCheap.png" title="goedkope inkom" class="icon">
+                                @endif
+                                @if(($company->price_id)==3)
+                                <img src="../../assets/img/priceNormal.png" title="aanvaardbare inkomprijs" class="icon">
+                                @endif
+                                @if(($company->price_id)==4)
+                                <img src="../../assets/img/priceExpensive.png" title="dure inkomprijs" class="icon">
+                                @endif
+                                @if(($company->adultEntry))
+                                <img src="../../assets/img/priceAdult.png" title="volwassenen dienen ook te betalen" class="icon">
+                                @endif
+                                {{-- Show icons: playground for ages --}}
+                                @if(($company->baby)==1)
+                                <img src="../../assets/img/age36.png" title="voor kinderen van 0 tot 3 jaar" class="icon">
+                                @endif
+                                @if(($company->todler)==1)
+                                <img src="../../assets/img/age36.png" title="voor kinderen van 3 tot 6 jaar" class="icon">
+                                @endif
+                                @if(($company->child)==1)
+                                <img src="../../assets/img/age69.png" title="voor kinderen van 6 tot 9 jaar" class="icon">
+                                @endif
+                                @if(($company->teen)==1)
+                                <img src="../../assets/img/age912.png" title="voor kinderen van 9 tot 12 jaar" class="icon">
+                                @endif
+                                {{-- show icons concerning size of playground --}}
+                                @if(($company->size_id)==1)
+                                <img src="../../assets/img/sizeS.png" title="kleine speeltuin" class="icon">
+                                @endif
+                                @if(($company->size_id)==2)
+                                <img src="../../assets/img/sizeM.png" title="Speeltuin van een normale omvang" class="icon">
+                                @endif
+                                @if(($company->size_id)==3)
+                                <img src="../../assets/img/sizeL.png" title="grote speeltuin" class="icon">
+                                @endif
+                                @if(($company->size_id)==4)
+                                <img src="../../assets/img/sizeXl.png" title="zeer grote speeltuin" class="icon">
+                                @endif
+                                {{-- show icons for general information --}}
+                                @if(($company->fnb)==1)
+                                <img src="../../assets/img/fnb.png" title="Mogelijkheid voor eten en drinken ter plaatse" class="icon">
+                                @endif
+                                @if(($company->fnbNear)==1)
+                                <img src="../../assets/img/fnbNear.png" title="Mogelijkheid voor eten of drinken dicht bij locatie" class="icon">
+                                @endif
+                                @if(($company->pickNick)==1)
+                                <img src="../../assets/img/fnbPickNick.png" title="Picknick is toegestaan" class="icon">
+                                @endif
+                                @if(($company->wc)==1)
+                                <img src="../../assets/img/wc.png" title="wc aanwezig op locatie" class="icon">
+                                @endif
+                                @if(($company->cityLs)==1)
+                                <img src="../../assets/img/lsCity.png" title="stedlijke omgeving" class="icon">
+                                @endif
+                                @if(($company->fieldLs)==1)
+                                <img src="../../assets/img/lsField.png" title="landelijke omgeving" class="icon">
+                                @endif
+                                @if(($company->forestLs)==1)
+                                <img src="../../assets/img/lsForest.png" title="bosrijke omgeving" class="icon">
+                                @endif
+
                             </div>
-                            <div class="d-flex justify-content-left mt-2">
-                                <img src="../../assets/img/from.png" title="" class="bi mr-1">
-                                <p>5km</p>
+                            <div class="mt-2">
+                                {{-- shows playground rating --}}
+                                @if(($company->rateOne)==1)
+                                <img src="../../assets/img/rate.png" title="Slecht" class="bi">
+                                @endif
+                                @if(($company->rateTwo)==1)
+                                <img src="../../assets/img/rate.png" title="ok" class="bi">
+                                @endif
+                                @if(($company->rateThree)==1)
+                                <img src="../../assets/img/rate.png" title="goed" class="bi">
+                                @endif
+                                @if(($company->rateFour)==1)
+                                <img src="../../assets/img/rate.png" title="zeer goed" class="bi">
+                                @endif
+                                @if(($company->rateFive)==1)
+                                <img src="../../assets/img/rate.png" title="uitstekend" class="bi">
+                                @endif
+                                 {{-- shows distance from current location to playground --}}
+                                 <p><img src="../../assets/img/from.png" title="" class="bi mr-1"> 5km</p>
+                              
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="col-md-2"></div>
     </div>

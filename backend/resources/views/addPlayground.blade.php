@@ -160,19 +160,19 @@
                             <h4>Voor leeftijd</h4>
                           
                             <!--age 0 - 3-->
-                            <input type="checkbox" class="radio_age" value="" name="baby" id="age1">
+                            <input type="checkbox" class="radio_age" value="1" name="baby" id="age1">
                             <label class="label_age" for="age1"> <img src="assets/img/age03.png" class="radioimg" > </label>
 
                             <!--age 3 - 6-->
-                            <input type="checkbox" class="radio_age" value="" name="todler" id="age2">
+                            <input type="checkbox" class="radio_age" value="1" name="todler" id="age2">
                             <label class="label_age" for="age2"> <img src="assets/img/age36.png" class="radioimg" > </label>
 
                              <!--age 6 - 9-->
-                             <input type="checkbox" class="radio_age" value="" name="child" id="age3">
+                             <input type="checkbox" class="radio_age" value="1" name="child" id="age3">
                              <label class="label_age" for="age3"> <img src="assets/img/age69.png" class="radioimg" > </label>
  
                              <!--age 9 - 12-->
-                             <input type="checkbox" class="radio_age" value="" name="teen" id="age4">
+                             <input type="checkbox" class="radio_age" value="1" name="teen" id="age4">
                              <label class="label_age" for="age4"> <img src="assets/img/age912.png" class="radioimg" > </label>
 
                             <br>
@@ -264,7 +264,25 @@
                             <div id="checkForest"><p class="info"> / In een bosrijke omgeving </p></div>   
 
                         </div>
-                        <div class="col-md-7 mt-5"> </div>
+                        <div class="col-md-7">
+                            <h4>Rating</h4>
+                            <!--rating-->
+                            <input type="checkbox" class="radio_age hmRateOne" value="1" name="hmRate" id="hmRate">
+                            <label class="label_age" for="hmRate"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- second star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateTwo" id="hmRateTwo">
+                            <label class="label_age" for="hmRateTwo"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- third star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateThree" id="hmRateThree">
+                            <label class="label_age" for="hmRateThree"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- fourth star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateFour" id="hmRateFour">
+                            <label class="label_age" for="hmRateFour"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                             <!-- fifth star -->
+                            <input type="checkbox" class="radio_age" value="1" name="hmRateFive" id="hmRateFive">
+                            <label class="label_age" for="hmRateFive"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
+                        
+                        </div>
                     </div>
                     <hr>
                     <div class="row">
