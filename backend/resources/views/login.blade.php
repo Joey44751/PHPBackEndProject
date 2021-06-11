@@ -112,7 +112,7 @@
                 <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
                 <input type="password" #registerPass name="password" id="signuppassword" class="form-control"
                   placeholder="***********" pattern="^\S{8,}$"
-                  onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;"
+                  onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.signupcpassword.pattern = this.value;"
                   required>
               </div>
               <div class="form-group">
