@@ -231,9 +231,12 @@
                         <img src="../../assets/img/vb2.jpg" alt="..." class="img-thumbnail">
                     </div>
                     <div class="col-md-8">
+                        <a href="/playground/{{$company->id}}">
                         <div class="card-body">
                             <div>
+                            
                             <h5 class="card-title">{{$company->namePlayground}}</h5>
+                           
                             </div>
                             <div>
                                 {{-- show icons concerning price of playground --}}
@@ -324,6 +327,7 @@
                               
                             </div>
                         </div>
+                    </a>
                     </div>
                 </div>
             </div>

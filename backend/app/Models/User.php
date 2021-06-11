@@ -11,6 +11,10 @@ class User extends \TCG\Voyager\Models\User
 {
     use HasFactory, Notifiable;
 
+    public function favorites(){
+        return $this->hasMany(Favorite::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

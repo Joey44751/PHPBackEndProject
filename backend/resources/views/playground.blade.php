@@ -26,19 +26,32 @@
     </div>
     
         <!-- name of playground, rating and verification -->
-        <div class="container mt-3" *ngFor="let playground of playgrounds$ | async">
+        <div class="container mt-3">
             <div class="row pt-2">
                 <div class="col-md-2 "></div>
-                <div class="col-md-4"><h2>playground name</h2></div>
+                <div class="col-md-4"><h2>{{$company->namePlayground}}</h2></div>
                 <div class="col-md-2 cnt">
-                    <img src="assets/img/rate.png" class="icon" title="rating">
-                    <img src="assets/img/rate.png" class="icon" title="rating">
-                    <img src="assets/img/rateHalf.png" class="icon" title="rating">
+                    {{-- shows playground rating --}}
+                    @if(($company->rateOne)==1)
+                    <img src="../../assets/img/rate.png" title="Slecht" class="icon">
+                    @endif
+                    @if(($company->rateTwo)==1)
+                    <img src="../../assets/img/rate.png" title="ok" class="icon">
+                    @endif
+                    @if(($company->rateThree)==1)
+                    <img src="../../assets/img/rate.png" title="goed" class="icon">
+                    @endif
+                    @if(($company->rateFour)==1)
+                    <img src="../../assets/img/rate.png" title="zeer goed" class="icon">
+                    @endif
+                    @if(($company->rateFive)==1)
+                    <img src="../../assets/img/rate.png" title="uitstekend" class="icon">
+                    @endif
                 </div>
                 <!-- title block icons -->
                 <div class="col-md-2 cnt">
-                    <img src="assets/img/addByUser.png" class="icon" title="toegevoegd door">
-                    <img src="assets/img/verf.png" class="icon" title="geverifieerd">
+                   
+                    <img src="../../assets/img/verf.png" class="icon" title="geverifieerd">
                 </div>
                 <div class="col-md-2 mb-2"></div>
             </div>
@@ -53,14 +66,70 @@
                             <div class="col-md-12">
                                 <h3>Info</h3>
                                 <hr>
-                                <!-- info icons -->
-                                <div class="float-left"><img src="assets/img/age36.png" class="icon medium" media='all' title="voor leeftijd van 3-6 jaar"></div>
-                                <div class="float-left"><img src="assets/img/age69.png" class="icon medium" media='all' title="voor leeftijd van 6-9jaar"></div>
-                                <div class="float-left"><img src="assets/img/sizeM.png" class="icon medium" media='all' title="grote van de speeltuin"></div>
-                                <div class="float-left"><img src="assets/img/priceNormal.png" class="icon medium" media='all' title="Normale prijsklasse"></div>
-                                <div class="float-left"><img src="assets/img/fnb.png" class="icon medium" media='all' title="mogelijkheid tot eten en drinken aanwezig"></div>
-                                <div class="float-left"><img src="assets/img/wc.png" class="icon medium" media='all' title="WC aanwezig"></div>
-                                <div class="float-left"><p><img src="assets/img/from.png" class="icon medium" media='all' title="Afstand vanaf huidige locatie"> 2km</p></div>
+                                 {{-- show icons concerning price of playground --}}
+                                 @if(($company->price_id)==1)
+                                 <img src="../../assets/img/free.png" title="inkom gratis" class="icon">
+                                 @endif
+                                 @if(($company->price_id)==2)
+                                 <img src="../../assets/img/priceCheap.png" title="goedkope inkom" class="icon">
+                                 @endif
+                                 @if(($company->price_id)==3)
+                                 <img src="../../assets/img/priceNormal.png" title="aanvaardbare inkomprijs" class="icon">
+                                 @endif
+                                 @if(($company->price_id)==4)
+                                 <img src="../../assets/img/priceExpensive.png" title="dure inkomprijs" class="icon">
+                                 @endif
+                                 @if(($company->adultEntry))
+                                 <img src="../../assets/img/priceAdult.png" title="volwassenen dienen ook te betalen" class="icon">
+                                 @endif
+                                 {{-- Show icons: playground for ages --}}
+                                 @if(($company->baby)==1)
+                                 <img src="../../assets/img/age36.png" title="voor kinderen van 0 tot 3 jaar" class="icon">
+                                 @endif
+                                 @if(($company->todler)==1)
+                                 <img src="../../assets/img/age36.png" title="voor kinderen van 3 tot 6 jaar" class="icon">
+                                 @endif
+                                 @if(($company->child)==1)
+                                 <img src="../../assets/img/age69.png" title="voor kinderen van 6 tot 9 jaar" class="icon">
+                                 @endif
+                                 @if(($company->teen)==1)
+                                 <img src="../../assets/img/age912.png" title="voor kinderen van 9 tot 12 jaar" class="icon">
+                                 @endif
+                                 {{-- show icons concerning size of playground --}}
+                                 @if(($company->size_id)==1)
+                                 <img src="../../assets/img/sizeS.png" title="kleine speeltuin" class="icon">
+                                 @endif
+                                 @if(($company->size_id)==2)
+                                 <img src="../../assets/img/sizeM.png" title="Speeltuin van een normale omvang" class="icon">
+                                 @endif
+                                 @if(($company->size_id)==3)
+                                 <img src="../../assets/img/sizeL.png" title="grote speeltuin" class="icon">
+                                 @endif
+                                 @if(($company->size_id)==4)
+                                 <img src="../../assets/img/sizeXl.png" title="zeer grote speeltuin" class="icon">
+                                 @endif
+                                 {{-- show icons for general information --}}
+                                 @if(($company->fnb)==1)
+                                 <img src="../../assets/img/fnb.png" title="Mogelijkheid voor eten en drinken ter plaatse" class="icon">
+                                 @endif
+                                 @if(($company->fnbNear)==1)
+                                 <img src="../../assets/img/fnbNear.png" title="Mogelijkheid voor eten of drinken dicht bij locatie" class="icon">
+                                 @endif
+                                 @if(($company->pickNick)==1)
+                                 <img src="../../assets/img/fnbPickNick.png" title="Picknick is toegestaan" class="icon">
+                                 @endif
+                                 @if(($company->wc)==1)
+                                 <img src="../../assets/img/wc.png" title="wc aanwezig op locatie" class="icon">
+                                 @endif
+                                 @if(($company->cityLs)==1)
+                                 <img src="../../assets/img/lsCity.png" title="stedlijke omgeving" class="icon">
+                                 @endif
+                                 @if(($company->fieldLs)==1)
+                                 <img src="../../assets/img/lsField.png" title="landelijke omgeving" class="icon">
+                                 @endif
+                                 @if(($company->forestLs)==1)
+                                 <img src="../../assets/img/lsForest.png" title="bosrijke omgeving" class="icon">
+                                 @endif
                             </div>
                         </div>
                         <!-- Space underneath info icons -->
@@ -68,7 +137,7 @@
                             <div class="col-md-12 mt-5">
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Menu</p>
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Overzicht van de speeltuin</p>
-                                <p><i class="bi bi-globe"title="website"></i> | www.webadresvandepartner.be</p>
+                                <p><i class="bi bi-globe"title="website"></i> | {{$company->website}}</p>
                                 <p id="verf" onclick="erik()"><span><i class="bi bi-person-check-fill"></i></span> | verifieer deze speeltuin</p>
                             </div>
                         </div>
@@ -78,7 +147,7 @@
                 <!-- discription and actions for playground -->
                 <h3>Korte omschrijving</h3>
                 <hr>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>{{$company->description}}</p>
                 <!-- action buttons -->
                 <div class="btn-group">
                     <!-- save icon - heart -->
@@ -125,29 +194,13 @@
                 <div class="container d-flex justify-content-center mt-200">
                     <div class="row">
                         <!-- choose number of stars -->
-                        <div class="col-md-12">
-                            <div class="stars">
-                                <form action=""> 
-                                    <input class="star star-5" value="oneStar" id="star-5" type="radio" name="star" /> <label class="star star-5" for="star-5"></label> 
-                                    <input class="star star-4" value="twoStar" id="star-4" type="radio" name="star" /> <label class="star star-4" for="star-4"></label> 
-                                    <input class="star star-3" value="threeStar" id="star-3" type="radio" name="star" /> <label class="star star-3" for="star-3"></label> 
-                                    <input class="star star-2" value="fourStar" id="star-2" type="radio" name="star" /> <label class="star star-2" for="star-2"></label> 
-                                    <input class="star star-1" value="fiveStar" id="star-1" type="radio" name="star" /> <label class="star star-1" for="star-1"></label> 
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="panel">
                     <!-- write review -->
                         <div class="panel-body">
                             <textarea class="form-control" name="PgReview" rows="2" placeholder="schrijf hier uw review"></textarea>
-                            <div class="mar-top clearfix">
-                        <!-- Submit button -->
-                            <button class="btn" type="submit"><i></i> Submit</button>
-                                <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
-                                <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
-                            </div>
+
                         </div>
                     </div>
             </div>
