@@ -143,7 +143,7 @@
                             <div class="col-md-12 mt-5">
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Menu</p>
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Overzicht van de speeltuin</p>
-                                <p><i class="bi bi-globe"title="website"></i> | {{$company->website}}</p>
+                                <p><i class="bi bi-globe"title="website"></i> | <a href="{{$company->website}}" style="text-decoration: none" target="_blank"> {{$company->website}}</a></p>
                                 <p id="verf" onclick="erik()"><span><i class="bi bi-person-check-fill"></i></span> | verifieer deze speeltuin</p>
                             </div>
                         </div>
@@ -197,11 +197,6 @@
             <div class="col-md-8 bootstrap snippets">
                 <h3>Reviews</h3>
                 <br>
-                <div class="container d-flex justify-content-center mt-200">
-                    <div class="row">
-                        <!-- choose number of stars -->
-                    </div>
-                </div>
                 <div class="panel">
                     <!-- write review -->
                         <div class="panel-body">
