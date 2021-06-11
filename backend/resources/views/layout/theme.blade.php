@@ -36,7 +36,10 @@
             <li class="nav-item"><a class="{{Request::path() === '/' ? 'nav-link active active' : 'nav-link' }}" href="/favorites">Favorieten</a></li>
             <li class="nav-item"><a class="{{Request::path() === '/' ? 'nav-link active active' : 'nav-link' }}" href="/contact">Contact</a></li>
             <li class="nav-item"><a class="{{Request::path() === '/' ? 'nav-link active active' : 'nav-link' }}" title="Gebruikers info" href="/userpage"><i class="bi bi-person-circle"></i></a></li>
-            <li class="nav-item"><a class="{{Request::path() === '/' ? 'nav-link active active' : 'nav-link' }}" title=""><i class="bi bi-box-arrow-right"></i></a></li>
+            <li class="nav-item"><a class="{{Request::path() === '/' ? 'nav-link active active' : 'nav-link' }}" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" title=""><i class="bi bi-box-arrow-right"></i></a></li>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                @csrf
+            </form>
         </ul>
     </div>
     <div class="mx-auto order-0">
