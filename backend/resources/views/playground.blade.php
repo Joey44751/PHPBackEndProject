@@ -52,6 +52,12 @@
                 <div class="col-md-2 cnt">
                    
                     <img src="../../assets/img/verf.png" class="icon" title="geverifieerd">
+                    {{-- @php 
+                    $update =new Carbon\Carbon($company->Updated_at)format('d-f-y');
+                    }
+        
+                    @endphp --}}
+                    <p class="lastup" >Laatste update: <br> {{$company->Updated_at}}</p>
                 </div>
                 <div class="col-md-2 mb-2"></div>
             </div>
