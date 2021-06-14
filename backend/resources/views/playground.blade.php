@@ -1,28 +1,18 @@
 @extends('layout.theme')
 <link rel="stylesheet" href="assets/css/playground.css">
 @section('content')
-    <!-- header photo carrousel -->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/top.jpg" class="d-block w-100" alt="cover">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/vb2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/vb.jpg" class="d-block w-100" alt="...">
-          </div>
+    <!-- header photo -->
+    <div class="container">
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+        <div>
+            <h3>test</h3>
+            <img src="{{$company->photo}}" class="img-fluid" alt="{{$company->name}}">
         </div>
-        <!-- carrousel buttons -->
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
+        </div>
+        <div class="col-md-2"></div>
+        </div>
     </div>
     
         <!-- name of playground, rating and verification -->

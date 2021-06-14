@@ -53,3 +53,4 @@ Route::get('/contact', function () {
 Route::post('/addPg', 'App\Http\Controllers\CompanyController@store');
 
 Route::get('/playground/{id}','App\Http\Controllers\CompanyController@detail');
+
