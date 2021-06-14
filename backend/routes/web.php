@@ -23,11 +23,6 @@ Route::get('/', function () {
     return view('login');
 });
 
-// Route::get('/playground', function () {
-//     Mapper::map(50.964499, 5.409432);
-//     return view('playground');
-// });
-
 Route::get('/home', function () {
     Mapper::map(50.964499, 5.409432, ['eventClick' => 'console.log("left click");']);
     $companies = App\Models\Company::get();
@@ -38,7 +33,7 @@ Route::get('/home', function () {
         //dd($mapArray->long);
         Mapper::marker($mapArray->long, $mapArray->lat,[
             'label'     => [
-                'text' => 'Marker',
+                'text' => $mapArray->namePlayground,
                 'color' => '#B9B9B9',
                 'fontFamily' => 'Arial',
                 'fontSize' => '13px',
