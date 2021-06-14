@@ -281,7 +281,7 @@
                              <!-- fifth star -->
                             <input type="checkbox" class="radio_age" value="1" name="hmRateFive" id="hmRateFive">
                             <label class="label_age" for="hmRateFive"> <img src="assets/img/rate.png" class="icon" title="rating"> </label>
-                        
+
                         </div>
                     </div>
                     <hr>
