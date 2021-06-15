@@ -1,28 +1,18 @@
 @extends('layout.theme')
 <link rel="stylesheet" href="assets/css/playground.css">
 @section('content')
-    <!-- header photo carrousel -->
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/top.jpg" class="d-block w-100" alt="cover">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/vb2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/vb.jpg" class="d-block w-100" alt="...">
-          </div>
+    <!-- header photo -->
+    <div class="container">
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+        <div>
+            <h3>test</h3>
+            <img src="{{$company->photo}}" class="img-fluid" alt="{{$company->name}}">
         </div>
-        <!-- carrousel buttons -->
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
+        </div>
+        <div class="col-md-2"></div>
+        </div>
     </div>
     
         <!-- name of playground, rating and verification -->
@@ -52,6 +42,12 @@
                 <div class="col-md-2 cnt">
                    
                     <img src="../../assets/img/verf.png" class="icon" title="geverifieerd">
+                    {{-- @php 
+                    $update =new Carbon\Carbon($company->Updated_at)format('d-f-y');
+                    }
+        
+                    @endphp --}}
+                    <p class="lastup" >Laatste update: <br> {{$company->Updated_at}}</p>
                 </div>
                 <div class="col-md-2 mb-2"></div>
             </div>
@@ -137,7 +133,7 @@
                             <div class="col-md-12 mt-5">
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Menu</p>
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Overzicht van de speeltuin</p>
-                                <p><i class="bi bi-globe"title="website"></i> | {{$company->website}}</p>
+                                <p><i class="bi bi-globe"title="website"></i> | <a href="{{$company->website}}" style="text-decoration: none" target="_blank"> {{$company->website}}</a></p>
                                 <p id="verf" onclick="erik()"><span><i class="bi bi-person-check-fill"></i></span> | verifieer deze speeltuin</p>
                             </div>
                         </div>
@@ -191,11 +187,6 @@
             <div class="col-md-8 bootstrap snippets">
                 <h3>Reviews</h3>
                 <br>
-                <div class="container d-flex justify-content-center mt-200">
-                    <div class="row">
-                        <!-- choose number of stars -->
-                    </div>
-                </div>
                 <div class="panel">
                     <!-- write review -->
                         <div class="panel-body">

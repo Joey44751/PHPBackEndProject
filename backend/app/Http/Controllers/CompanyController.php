@@ -50,6 +50,8 @@ class CompanyController extends Controller
             'price' => 'required',
         ]);
 
+        $timestamp = now()->timestamp;
+        $filename= request('photo')->getClientOriginalName();
         $company = Company::firstOrCreate(
             ['namePlayground' => $request->namePlayground],
             ['street' => $request->street,
@@ -70,16 +72,19 @@ class CompanyController extends Controller
             'todler'=> $request->todler,
             'child'=> $request->child,
             'teen'=> $request->teen,
-            'rateOne'=> $request->rateOne,
-            'rateTwo'=> $request->rateTwo,
-            'rateThree'=> $request->rateThree,
-            'rateFour'=> $request->rateFour,
-            'rateFive'=> $request->rateFive            
+            'rateOne'=> $request->hmRate,
+            'rateTwo'=> $request->hmRateTwo,
+            'rateThree'=> $request->hmRateThree,
+            'rateFour'=> $request->hmRateFour,
+            'rateFive'=> $request->hmRateFive,
+            'photo'=>$timestamp.'_'.$filename            
         ]);
+
+        $request->photo->move(public_path('storage'),$timestamp.'_'.$filename);
 
         if ($company->wasRecentlyCreated){
             toast('Speeltuin succesvol toegevoegd, bedankt voor uw bijdrage!','success')->autoClose(5000)->position('middle');
-            return view('Playground');
+            return view('addPlayground');
             } else {
             toast('Deze speeltuin is reeds toegevoegd.','warning')->autoClose(5000)->position('middle');
             return view('addPlayground');

@@ -324,18 +324,10 @@
                     <div class="row">
                         <div class="col-md-12">
                                 <h3 class=""> Voeg foto's toe</h3>
-                                        <form>
-                                        <div class="form-group">
-                                                <div class="custom-file">
-                                                <input type="file" name="files[]" multiple class="custom-file-input form-control" id="customFile">
-                                                <label class="custom-file-label" for="customFile">Kies bestand</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="button" name="upload" value="upload" id="upload" class="btn btn-block btn-dark"><i
-                                                    class="fa fa-fw fa-upload"></i> Upload</button>
-                                        </div>
-                                    </form>
+                                <div class="form-group mt-3">
+                                    <label for="">foto opladen</label>
+                                    <input type="file" class="form-control" name="phone">
+                                </div>
                         </div>
                     </div>
                  </div>
