@@ -29,16 +29,29 @@ Route::get('/', function () {
 // });
 
 Route::get('/home', function () {
-    Mapper::map(50.964499, 5.409432);
+    Mapper::map(50.964499, 5.409432, ['eventClick' => 'console.log("left click");']);
     $companies = App\Models\Company::get();
     $prices = App\Models\Price::get();
     $sizes = App\Models\Size::get();
+    $mapArrays = Company::where('long','!=',NULL)->get();
+    foreach ($mapArrays as $mapArray) {
+        //dd($mapArray->long);
+        Mapper::marker($mapArray->long, $mapArray->lat,[
+            'label'     => [
+                'text' => 'Marker',
+                'color' => '#B9B9B9',
+                'fontFamily' => 'Arial',
+                'fontSize' => '13px',
+                'fontWeight' => 'bold',
+            ],
+        ]);}
     return view('home', compact('companies','prices','sizes'));
 });
 
 Route::get('/addplayground', function () {
-    Mapper::map(50.964499, 5.409432);
+    Mapper::map(0, 0, ['locate' => true]);
     return view('addplayground');
+    
 });
 
 Route::get('/favorites', function () {

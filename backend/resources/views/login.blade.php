@@ -74,10 +74,10 @@
                   <div class="col-md-2"></div>
                   <div class="col-md-8">
                     <div class="formGroup text-center">
-                      <button type="button" class="btn googleBtn">
+<!--                       <button type="button" class="btn googleBtn">
                         <i class="fab fa-google-plus-g"></i>
                         Continue with Google
-                      </button>
+                      </button> -->
                     </div>
                   </div>
                   <div class="col-md-2"></div>
@@ -112,7 +112,7 @@
                 <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
                 <input type="password" #registerPass name="password" id="signuppassword" class="form-control"
                   placeholder="***********" pattern="^\S{8,}$"
-                  onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;"
+                  onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.signupcpassword.pattern = this.value;"
                   required>
               </div>
               <div class="form-group">
@@ -141,10 +141,10 @@
                   <div class="col-md-2"></div>
                   <div class="col-md-8">
                     <div class="formGroup text-center">
-                      <button type="button" class="btn googleBtn"">
+<!--                       <button type="button" class="btn googleBtn">
                         <i class="fab fa-google-plus-g"></i>
                         Continue with Google
-                      </button>
+                      </button> -->
                     </div>
                   </div>
                   <div class="col-md-2"></div>
@@ -158,7 +158,8 @@
     <!-- Modal -->
     <div class="modal fade" id="forgotPass" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <form id="forgotpassForm" >
+        <form id="forgotpassForm" method="POST" action="{{route('password.email')}}" >
+        @csrf
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Forgot Password</h5>
@@ -168,17 +169,14 @@
             <div class="modal-body">
               <div class="form-group">
                 <label>Email <span class="text-danger">*</span></label>
-                <input type="email" #forgotEmail name="forgotemail" id="forgotemail" class="form-control"
+                <input type="email" #forgotEmail name="email" id="forgotemail" class="form-control"
                   placeholder="Enter your valid email..." required>
               </div>
               <div class="form-group">
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                (click)="authService.SignIn(emailLogin.value,passwordLogin.value)">Sign In</button>
-              <button type="submit" name="forgotPass" (click)="authService.ForgotPassword(forgotEmail.value)"
-                class="btn btn-primary"><i class="fa fa-envelope"></i> Send Request</button>
+              <button type="submit" name="forgotPass" class="btn btn-primary"><i class="fa fa-envelope"></i> Send Request</button>
             </div>
           </div>
         </form>
@@ -186,8 +184,6 @@
     </div>
   </div> 
 
-
-<!-- Functionality scripts -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -201,5 +197,4 @@
 </body>
 
 </html>
-<!-- (click)="authService.LogConsole(emailLogin.value)" for logging -->
 @endsection
