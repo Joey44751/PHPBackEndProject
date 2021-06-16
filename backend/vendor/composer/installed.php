@@ -225,6 +225,12 @@
     ),
     'facade/ignition' => 
     array (
+      'pretty_version' => '2.10.1',
+      'version' => '2.10.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '508d80f91de953617977e5666f8953669b6e81f2',
       'pretty_version' => '2.10.2',
       'version' => '2.10.2.0',
       'aliases' => 
