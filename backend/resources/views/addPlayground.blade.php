@@ -326,7 +326,7 @@
                                 <h3 class=""> Voeg foto's toe</h3>
                                 <div class="form-group mt-3">
                                     <label for="">foto opladen</label>
-                                    <input type="file" class="form-control" name="phone">
+                                    <input type="file" class="form-control" name="playgroundPic">
                                 </div>
                         </div>
                     </div>
