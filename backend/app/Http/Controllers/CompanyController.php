@@ -84,8 +84,8 @@ class CompanyController extends Controller
             'rateFour'=> $request->hmRateFour,
             'rateFive'=> $request->hmRateFive,
             'playgroundPic'=>$timestamp.'_'.$filename,
-            'long'=>$result["lng"],
-            'lat'=>$result["lat"]            
+            'long'=>$result["lat"],
+            'lat'=>$result["lng"],            
         ]);
 
         $request->playgroundPic->move(public_path('storage'),$timestamp.'_'.$filename);
