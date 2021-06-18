@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use App\Http\controllers\CompanyController;
 use Illuminate\Http\Request;
+use Spatie\Geocoder\Facades\Geocoder;
 
 
 class CompanyController extends Controller
@@ -41,7 +42,12 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-      
+        $client = new \GuzzleHttp\Client();
+        $geocoder = new \Spatie\Geocoder\Geocoder($client);
+        $geocoder->setApiKey(config('geocoder.key'));
+        $geocoder->setCountry(config('geocoder.country'));
+        $result = $geocoder->getCoordinatesForAddress($request->street, $request->postal);
+
         $validate = request()->validate([
             'namePlayground' => 'required',
             'street' => 'required',
@@ -77,7 +83,9 @@ class CompanyController extends Controller
             'rateThree'=> $request->hmRateThree,
             'rateFour'=> $request->hmRateFour,
             'rateFive'=> $request->hmRateFive,
-            'playgroundPic'=>$timestamp.'_'.$filename            
+            'playgroundPic'=>$timestamp.'_'.$filename,
+            'long'=>$result["lng"],
+            'lat'=>$result["lat"]            
         ]);
 
         $request->playgroundPic->move(public_path('storage'),$timestamp.'_'.$filename);
