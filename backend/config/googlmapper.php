@@ -223,7 +223,7 @@ return [
         | Display a custom icon for markers. (Link to an image)
         |
         */
-        'icon' => '',
+        'icon' => 'assets/img/mapmarker.png',
 
         /*
         |--------------------------------------------------------------------------
@@ -234,6 +234,7 @@ return [
         |
         */
         'animation' => 'DROP',
+        'eventClick' => '/playground/{id}'
 
     ],
 
@@ -307,7 +308,7 @@ return [
         | hidden and a count is shown.
         |
         */
-        'size' => 2
+        'size' => 3
 
     ],
 
