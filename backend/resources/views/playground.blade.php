@@ -7,8 +7,8 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
         <div>
-            <h3>test</h3>
-            <img src="{{$company->photo}}" class="img-fluid" alt="{{$company->name}}">
+            <img src="{{url('storage/'.$company->playgroundPic)}}" class="img-fluid" alt="">
+            {{-- <img src="{{public_path('storage/'.$company->playgroundPic)}}" class="img-fluid" alt="{{$company->name}}"> --}}
         </div>
         </div>
         <div class="col-md-2"></div>
