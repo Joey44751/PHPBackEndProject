@@ -41,8 +41,9 @@ Route::get('/home', function () {
                 'fontFamily' => 'Arial',
                 'fontSize' => '13px',
                 'fontWeight' => 'bold',
-                'eventClick' => 'http://127.0.0.1:8000/playground/{id}'
+                
             ],
+
         ]);}
     // counts number of slected playgrounds in the database
     $countCompany = Company::all()->count();

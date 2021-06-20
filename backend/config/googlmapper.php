@@ -234,7 +234,7 @@ return [
         |
         */
         'animation' => 'DROP',
-        'eventClick' => '/playground/{id}'
+        
 
     ],
 
