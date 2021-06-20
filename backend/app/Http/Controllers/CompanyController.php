@@ -54,6 +54,7 @@ class CompanyController extends Controller
             'postal' => 'required',
             'size' => 'required',
             'price' => 'required',
+            'website' => 'required',
         ]);
 
         $timestamp = now()->timestamp;

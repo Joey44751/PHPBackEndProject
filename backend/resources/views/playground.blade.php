@@ -7,7 +7,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
         <div>
-            <img src="{{url('storage/'.$company->playgroundPic)}}" class="img-fluid" alt="">
+            <img src="{{url('storage/'.$company->playgroundPic)}}" class="img-fluid" width="100%" alt="">
             {{-- <img src="{{public_path('storage/'.$company->playgroundPic)}}" class="img-fluid" alt="{{$company->name}}"> --}}
         </div>
         </div>
@@ -133,7 +133,8 @@
                             <div class="col-md-12 mt-5">
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Menu</p>
                                 <p><i class="bi bi-eye-fill" title="online bekijken"></i> | <i class="bi bi-file-earmark-arrow-down-fill" title="download"></i> Overzicht van de speeltuin</p>
-                                <p><i class="bi bi-globe"title="website"></i> | <a href="{{$company->website}}" style="text-decoration: none" target="_blank"> {{$company->website}}</a></p>
+                                <p><i class="bi bi-globe"title="website"></i> | <a href="{{url($company->website)}}" style="text-decoration: none" target="_blank"> {{$company->website}}</a></p>
+                               
                                 <p id="verf" onclick="erik()"><span><i class="bi bi-person-check-fill"></i></span> | verifieer deze speeltuin</p>
                             </div>
                         </div>
