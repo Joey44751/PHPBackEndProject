@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\PlaygroundController;
 use App\Models\Company;
+use Illuminate\Http\Request;
 use App\Models\Price;
 use App\Models\Size;
 use App\Models\Favorite;
@@ -61,6 +62,19 @@ Route::get('/favorites', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/sendmail', function (Request $request) {
+    $email = $request->email;
+    $message = $request->message;
+    $details = [
+        'title' => ('New email from: ' . $request->email),
+        'body' => $request->message
+    ];
+    \Mail::to('mighty@ducks.quack')->send(new \App\Mail\sendMail($details));
+    toast('Email verstuurd!','success')->autoClose(5000)->position('middle');
+    return view('contact');
+});
+
 // stores the new playground in the database
 Route::post('/addPg', 'App\Http\Controllers\CompanyController@store');
 
