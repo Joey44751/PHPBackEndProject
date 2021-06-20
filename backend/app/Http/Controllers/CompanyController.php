@@ -19,7 +19,7 @@ class CompanyController extends Controller
     {
      //  
     }
-
+    // get details from a specific playground and show them on the playground blade
     public function detail($id) {
         $company = Company::where('id', $id)->firstOrFail();
         return view('playground',compact('company'));
@@ -42,22 +42,27 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
+        // transform street and postal adres into lat and long coordinates
         $client = new \GuzzleHttp\Client();
         $geocoder = new \Spatie\Geocoder\Geocoder($client);
         $geocoder->setApiKey(config('geocoder.key'));
         $geocoder->setCountry(config('geocoder.country'));
         $result = $geocoder->getCoordinatesForAddress($request->street, $request->postal);
 
+        // validate input
         $validate = request()->validate([
             'namePlayground' => 'required',
             'street' => 'required',
             'postal' => 'required',
             'size' => 'required',
             'price' => 'required',
+            'website' => 'required',
         ]);
 
+        // get picture name and current timestamp variables
         $timestamp = now()->timestamp;
         $filename= request('playgroundPic')->getClientOriginalName();
+        // add input to database in corresponding colums
         $company = Company::firstOrCreate(
             ['namePlayground' => $request->namePlayground],
             ['street' => $request->street,
@@ -83,16 +88,21 @@ class CompanyController extends Controller
             'rateThree'=> $request->hmRateThree,
             'rateFour'=> $request->hmRateFour,
             'rateFive'=> $request->hmRateFive,
+            // save picture with timestamp added
             'playgroundPic'=>$timestamp.'_'.$filename,
             'long'=>$result["lat"],
             'lat'=>$result["lng"],            
         ]);
 
+        // move file to storage map in public folder
         $request->playgroundPic->move(public_path('storage'),$timestamp.'_'.$filename);
 
+        // check if playground allready exists, shows toast message center screen
+        // if it doesnt exist
         if ($company->wasRecentlyCreated){
             toast('Speeltuin succesvol toegevoegd, bedankt voor uw bijdrage!','success')->autoClose(5000)->position('middle');
             return view('addPlayground');
+            // otherwise
             } else {
             toast('Deze speeltuin is reeds toegevoegd.','warning')->autoClose(5000)->position('middle');
             return view('addPlayground');

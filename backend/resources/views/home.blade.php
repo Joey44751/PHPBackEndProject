@@ -228,7 +228,7 @@
             <div class="card mb-3">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="../../assets/img/vb2.jpg" alt="..." class="img-thumbnail">
+                        <img src="{{url('storage/'.$company->playgroundPic)}}" class="img-thumbnail" alt="">
                     </div>
                     <div class="col-md-8">
                         <a href="/playground/{{$company->id}}">

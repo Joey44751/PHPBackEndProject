@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends \TCG\Voyager\Models\User
 {
     use HasFactory, Notifiable;
-
+    // one user has many favorites = one to many relation
     public function favorites(){
         return $this->hasMany(Favorite::class);
     }
