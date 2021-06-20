@@ -224,6 +224,9 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+            {{-- shows number of playgrounds in list --}}
+            <h5 class="mb-4">We hebben <strong>{{$countCompany}}</strong> speeltuinen gevonden</h5>
+            {{-- shows all playgrounds with selected filter --}}
             @foreach($companies as $company)
             <div class="card mb-3">
                 <div class="row g-0">

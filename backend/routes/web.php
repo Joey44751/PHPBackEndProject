@@ -42,7 +42,9 @@ Route::get('/home', function () {
                 'fontWeight' => 'bold',
             ],
         ]);}
-    return view('home', compact('companies','prices','sizes'));
+    // counts number of slected playgrounds in the database
+    $countCompany = Company::all()->count();
+    return view('home', compact('companies','prices','sizes','countCompany'));
 });
 // Shows add playground blade, including a map with current location
 Route::get('/addplayground', function () {
